@@ -1,21 +1,13 @@
-# Open Props UI
+<script setup>
+	import Alert from "../.vitepress/theme/app/components/Alert.vue";
+</script>
+
+<hgroup>
+<p>Guide</p>
+<h1>What is Open Props UI?</h1>
+</hgroup>
 
 A CSS UI library exploring how next-gen HTML & CSS features can change the way we create components. Designed to be used by professional teams as well as tinkering hobbyists. Everything is made with **ease-of-use** and **scalability** in mind. Last but not least - you **copy and paste** the components into your repo. It's the best way to have a complete **understanding** and **ownership** over your stuff.
-
-https://open-props-ui.netlify.app/
-
-## Getting started
-
-Check out the [getting started guide](https://open-props-ui.netlify.app/guide/getting-started.html).
-
-## Development
-
-This repo holds the code for the UI library and the docs. The docs are used as a testbed for the UI library.
-
-```
-pnpm i
-pnpm docs:dev
-```
 
 ## Backstory
 
@@ -23,12 +15,15 @@ Practically all established UI libraries need to take older browser versions int
 
 ## The goal of the component library
 
-> "If you only use the latest features, that means this is can never enter production"
-
-Yes and no. Right now that's true for most components. The point is to let the spec and the components mature alongside each other and in time the library will be ready for production.
-
-- Have sensible defaults without sacrificing flexibility and control
-- Use modern HTML & CSS features
+- Have pragmatic defaults without sacrificing flexibility and control
+- Leverage the native platform as much as possible
 - Follow accessibility guidelines
 - Serve as an inspiration
 - Be scalable
+<div class="not-rich-text">
+<Alert title='"If you only use the latest features, that means this is can never enter production"'>
+
+Yes and no. Right now that's true for most components. The point is to let the spec and the components mature alongside each other and in time the library will be ready for production.
+</Alert>
+
+</div>
