@@ -32,7 +32,7 @@ This guide will set you up with:
 <div class="not-rich-text">
 
 <Alert class="ok outlined">
-<p>Open Props UI is <u><strong>just CSS</strong></u>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components/button">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
+<p>Open Props UI is <u><strong>just CSS</strong></u>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
 </Alert>
 </div>
 

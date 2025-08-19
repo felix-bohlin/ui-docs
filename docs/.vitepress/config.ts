@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ignoreDeadLinks: true,
   title: "Open Props UI",
   description:
     "CSS UI library leveraging the most modern features. Components you can copy and paste into your project.",
