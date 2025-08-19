@@ -10,7 +10,7 @@ status: public
 
 <script setup>
 	import { ref } from "vue"
-	import Example from "../.vitepress/theme/app/components/Example.vue"
+	import Example from "../../.vitepress/theme/app/components/Example.vue"
 
 	const stopIt = ref(2)
 </script>
