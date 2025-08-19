@@ -17,6 +17,10 @@ import Alert from "../.vitepress/theme/app/components/Alert.vue";
 
 <span></span>
 
+You can choose between:
+- [manual setup](#manual-setup) (more fun, recommended)
+- [npm installation](#npm-installation) (a lot less fun, recommended)
+
 This guide will set you up with:
 
 - Open Props
@@ -24,26 +28,30 @@ This guide will set you up with:
 - some util classes
 - base theme setup
 
+
+
 <div class="not-rich-text">
 
-<Alert>
-<p>Open Props UI is <strong>just CSS</strong>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components/actions/button">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
+<Alert class="ok outlined">
+<p>Open Props UI is <u><strong>just CSS</strong></u>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components/actions/button">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
 </Alert>
 </div>
 
-## 1. Install Open Props
+## Manual setup
+
+### 1. Install Open Props
 
 Open Props v2 hasn't dropped yet, which is why this project relies on the OPv2 beta. The difference right now between the OPv1 and the OPv2 beta aren't huge (the way OPUI consumes it), so you should be fine with either version.
 
 ```sh
 # pnpm
-pnpm i opbeta@npm:open-props@2.0.0-beta.5 -S
+pnpm add opbeta@npm:open-props@2.0.0-beta.5 -S
 
 # npm
 npm i opbeta@npm:open-props@2.0.0-beta.5 -S
 ```
 
-## 2. Base setup
+### 2. Base setup
 
 The setup process will differ a bit if you use a framework, but the core principles still apply. You should have no problems getting it to work though :+1: Otherwise, [let me know](https://github.com/felix-bohlin/ui).
 
@@ -72,7 +80,7 @@ The setup process will differ a bit if you use a framework, but the core princip
 </Accordion>
 </div>
 
-### Folder structure
+#### Folder structure
 
 This is the folder structure that comes out of the box. Feel free to change it to your needs.
 
@@ -99,8 +107,21 @@ This is the folder structure that comes out of the box. Feel free to change it t
 
 </div>
 
-## 3. Copy & paste
+### 3. Copy & paste
 
 Browse [all the components](/components/actions/button).
 
 **Copy and paste** the HTML and CSS (see the "Installation" section on each component page) and you're good to go!
+
+
+## NPM installation
+
+```sh
+# pnpm
+pnpm add opui-css -S
+
+# npm
+npm i opui-css -S
+```
+
+Then check your `node_modules` folder for the `opui-css` package and pick and choose what files you want to use!

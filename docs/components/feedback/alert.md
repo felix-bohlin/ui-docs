@@ -103,7 +103,7 @@ Icon must be placed before the content.
 
 ## Severities
 
-There are four different severities - neutral (default), ok, warning, error.
+There are four different severities - default, ok, warning, error.
 
 <div class="not-rich-text">
 <Alert title="Icons and accessibility" severity="ok">
@@ -137,7 +137,7 @@ There are four different severities - neutral (default), ok, warning, error.
 <template #code>
 
 ```html{1}
-<article role="alert" class="alert neutral">
+<article role="alert" class="alert warning">
   <svg></svg>
   <div class="content">Warning</div>
 </article>
