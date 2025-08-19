@@ -10,7 +10,7 @@ status: public
 
 <script setup>
 	import { ref } from "vue"
-	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	import Example from "../.vitepress/theme/app/components/Example.vue"
 
 	const stopIt = ref(2)
 </script>
@@ -82,7 +82,7 @@ status: public
 <hgroup>
 	<p>2024-11-12</p>
 	<h1>The ridiculously confusing task of styling a decent-looking progress bar</h1>
-	<p>You would think it's easy. I mean, it's just one teeny tiny, simple <a class="link" href="/components/feedback/progress">progress</a> element!</p>
+	<p>You would think it's easy. I mean, it's just one teeny tiny, simple <a class="link" href="/components/progress">progress</a> element!</p>
 </hgroup>
 
 <p v-if="stopIt < 1" @click="stopIt = 2" style="cursor: pointer;">How hard could it be?</p>
@@ -241,5 +241,5 @@ I ended up reaching for the trusty `:after` pseudo-element. In this case it also
 
 ## Read more
 
-- [Progress](/components/feedback/progress)
-- [Spinner](/components/feedback/spinner)
+- [Progress](/components/progress)
+- [Spinner](/components/spinner)

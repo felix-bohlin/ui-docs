@@ -28,7 +28,7 @@ status: public
 <hgroup>
 	<p>2024-11-13</p>
 	<h1>Card component architecture design decisions</h1>
-	<p><a href="/components/data-display/card">Card</a> components are very flexible, which means they could basically do anything - making the design of it a surprising challenge. Let's talk about that.</p>
+	<p><a href="/components/card">Card</a> components are very flexible, which means they could basically do anything - making the design of it a surprising challenge. Let's talk about that.</p>
 </hgroup>
 
 By just looking at the examples below `card-alternative.html` is much more elegant and semantic than the card you'll find today in Open Props UI.
@@ -73,7 +73,7 @@ By just looking at the examples below `card-alternative.html` is much more elega
 
 </div>
 
-This would unfortunately cause inconsistencies between components. The [accordion](/components/data-display/accordion#actions) component already follows the heading/content/actions pattern - having cards use a different structure would mean developers would need to remember two different approaches for basically the same layout.
+This would unfortunately cause inconsistencies between components. The [accordion](/components/accordion#actions) component already follows the heading/content/actions pattern - having cards use a different structure would mean developers would need to remember two different approaches for basically the same layout.
 
 <div class="grid">
 

@@ -33,7 +33,7 @@ This guide will set you up with:
 <div class="not-rich-text">
 
 <Alert class="ok outlined">
-<p>Open Props UI is <u><strong>just CSS</strong></u>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components/actions/button">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
+<p>Open Props UI is <u><strong>just CSS</strong></u>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components/button">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
 </Alert>
 </div>
 
@@ -109,7 +109,7 @@ This is the folder structure that comes out of the box. Feel free to change it t
 
 ### 3. Copy & paste
 
-Browse [all the components](/components/actions/button).
+Browse [all the components](/components/button).
 
 **Copy and paste** the HTML and CSS (see the "Installation" section on each component page) and you're good to go!
 

@@ -18,110 +18,110 @@ title: Component API
 
 ## Actions
 
-### [Button](/components/actions/button)
+### [Button](/components/button)
 
-<!--@include: ./components/actions/button-api.md -->
+<!--@include: ./components/button-api.md -->
 
-### [Icon Button](/components/actions/icon-button)
+### [Icon Button](/components/icon-button)
 
-<!--@include: ./components/actions/icon-button-api.md -->
+<!--@include: ./components/icon-button-api.md -->
 
-### [Toggle button group](/components/actions/toggle-button-group)
+### [Toggle button group](/components/toggle-button-group)
 
-<!--@include: ./components/actions/toggle-button-group-api.md -->
+<!--@include: ./components/toggle-button-group-api.md -->
 
 ## Inputs
 
-### [Checkbox](/components/inputs/checkbox)
+### [Checkbox](/components/checkbox)
 
-<!--@include: ./components/inputs/checkbox-radio-api.md -->
-
-#### Field group API
-
-<!--@include: ./components/inputs/field-group-api.md -->
-
-### [Radio](/components/inputs/radio)
-
-<!--@include: ./components/inputs/checkbox-radio-api.md -->
+<!--@include: ./components/checkbox-radio-api.md -->
 
 #### Field group API
 
-<!--@include: ./components/inputs/field-group-api.md -->
+<!--@include: ./components/field-group-api.md -->
 
-### [Select](/components/inputs/select)
+### [Radio](/components/radio)
 
-#### Field API
+<!--@include: ./components/checkbox-radio-api.md -->
 
-<!--@include: ./components/inputs/field-api.md -->
+#### Field group API
 
-### [Switch](/components/inputs/switch)
+<!--@include: ./components/field-group-api.md -->
 
-<!--@include: ./components/inputs/switch-api.md -->
-
-### [Textarea](/components/inputs/textarea)
+### [Select](/components/select)
 
 #### Field API
 
-<!--@include: ./components/inputs/field-api.md -->
+<!--@include: ./components/field-api.md -->
 
-### [Text field](/components/inputs/text-field)
+### [Switch](/components/switch)
+
+<!--@include: ./components/switch-api.md -->
+
+### [Textarea](/components/textarea)
 
 #### Field API
 
-<!--@include: ./components/inputs/field-api.md -->
+<!--@include: ./components/field-api.md -->
+
+### [Text field](/components/text-field)
+
+#### Field API
+
+<!--@include: ./components/field-api.md -->
 
 ## Data display
 
-### [Accordion](/components/data-display/accordion)
+### [Accordion](/components/accordion)
 
-<!--@include: ./components/data-display/accordion-api.md -->
+<!--@include: ./components/accordion-api.md -->
 
-### [Avatar](/components/data-display/avatar)
+### [Avatar](/components/avatar)
 
-<!--@include: ./components/data-display/avatar-api.md -->
+<!--@include: ./components/avatar-api.md -->
 
-### [Badge](/components/data-display/badge)
+### [Badge](/components/badge)
 
-<!--@include: ./components/data-display/badge-api.md -->
+<!--@include: ./components/badge-api.md -->
 
-### [Card](/components/data-display/card)
+### [Card](/components/card)
 
-<!--@include: ./components/data-display/card-api.md -->
+<!--@include: ./components/card-api.md -->
 
-### [Chip](/components/data-display/chip)
+### [Chip](/components/chip)
 
-<!--@include: ./components/data-display/chip-api.md -->
+<!--@include: ./components/chip-api.md -->
 
-### [Definition list](/components/data-display/definition-list)
+### [Definition list](/components/definition-list)
 
-<!--@include: ./components/data-display/definition-list-api.md -->
+<!--@include: ./components/definition-list-api.md -->
 
-### [List](/components/data-display/list)
+### [List](/components/list)
 
-<!--@include: ./components/data-display/list-api.md -->
+<!--@include: ./components/list-api.md -->
 
-### [Table](/components/data-display/table)
+### [Table](/components/table)
 
-<!--@include: ./components/data-display/table-api.md -->
+<!--@include: ./components/table-api.md -->
 
-<h3><span class="badge warning" aria-label="⚠️🚧"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
+<h3><span class="badge warning" aria-label="⚠️🚧"><a href="/components/tooltip">Tooltip</a></span></h3>
 
 ## Feedback
 
-### [Alert](/components/feedback/alert)
+### [Alert](/components/alert)
 
-<!--@include: ./components/feedback/alert-api.md -->
+<!--@include: ./components/alert-api.md -->
 
-### [Dialog](/components/feedback/dialog)
+### [Dialog](/components/dialog)
 
-A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/data-display/card) component.
+A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/card) component.
 
 See [Card API](#card)
 
-### [Progress](/components/feedback/progress)
+### [Progress](/components/progress)
 
-### [Snackbar](/components/feedback/snackbar)
+### [Snackbar](/components/snackbar)
 
-<!--@include: ./components/feedback/snackbar-api.md -->
+<!--@include: ./components/snackbar-api.md -->
 
 ### Spinner
