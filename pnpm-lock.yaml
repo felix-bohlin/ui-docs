@@ -51,8 +51,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.2
       opui-css:
-        specifier: ^2.1.0
-        version: 2.1.0
+        specifier: ^2.2.1
+        version: 2.2.1
       shiki:
         specifier: ^3.10.0
         version: 3.10.0
@@ -1200,8 +1200,8 @@ packages:
   oniguruma-to-es@4.3.3:
     resolution: {integrity: sha512-rPiZhzC3wXwE59YQMRDodUwwT9FZ9nNBwQQfsd1wfdtlKEyCdRV0avrTcSZ5xlIvGRVPd/cx6ZN45ECmS39xvg==}
 
-  opui-css@2.1.0:
-    resolution: {integrity: sha512-TJfk3qoPF81OUX5v+zT6NFX0390umJMWtHeyS03na73U7O88wzfe/IKe+wsFaYTU93XD4OkkFTMo+B78yKpD2A==}
+  opui-css@2.2.1:
+    resolution: {integrity: sha512-3ANsWk/L9Hqy912NOuY7p524T4iv6r6cSnV9hPqfhLuE7uRs8aMgpR1If1+duQW1aRoakF00X6p4Ff5Q/R7voA==}
 
   path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
@@ -2444,7 +2444,7 @@ snapshots:
       regex: 6.0.1
       regex-recursion: 6.0.2
 
-  opui-css@2.1.0: {}
+  opui-css@2.2.1: {}
 
   path-browserify@1.0.1: {}
 

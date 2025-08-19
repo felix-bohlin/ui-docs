@@ -54,6 +54,23 @@ npm i opbeta@npm:open-props@2.0.0-beta.5 -S
 
 The setup process will differ a bit if you use a framework, but the core principles still apply. You should have no problems getting it to work though :+1: Otherwise, [let me know](https://github.com/felix-bohlin/ui).
 
+This is the folder structure that comes out of the box. Feel free to change it to your needs.
+
+```
+├─ main.css
+├─ opui.css
+├─ open-props.css
+├─ theme.css
+├─ core
+│  └─ normalize.css
+│  └─ utils.css
+│  └─ components.css
+├─ components
+│  └─ button.css
+│  └─ ...
+
+```
+
 <div class="not-rich-text">
 
 <ul class="definition-list dotted">
@@ -72,12 +89,20 @@ The setup process will differ a bit if you use a framework, but the core princip
     <hr>
     <span class="description">consists of Open Props imports, only</span>
   </li>
+  <li>
+   <span class="term"><code>theme.css</code></span>
+   <hr>
+   <span class="description">the default theme provided with OPUI
+</span>
+  </li>
 </ul>
 
 ::: code-group [main.css]
 <<< @/../node_modules/opui-css/src/main.css [main.css]
 <<< @/../node_modules/opui-css/src/opui.css [opui.css]
 <<< @/../node_modules/opui-css/src/open-props.css [open-props.css]
+<<< @/../node_modules/opui-css/src/theme.css [theme.css]
+
 :::
 
 <Accordion variant="tonal" style="margin-block-start: var(--size-3)">
@@ -86,39 +111,10 @@ The setup process will differ a bit if you use a framework, but the core princip
 ::: code-group
 <<< @/../node_modules/opui-css/src/core/normalize.css [normalize.css]
 <<< @/../node_modules/opui-css/src/core/utils.css [utils.css]
-<<< @/../node_modules/opui-css/src/core/theme.css [theme.css]
 <<< @/../node_modules/opui-css/src/core/components.css [components.css]
 :::
 
 </Accordion>
-</div>
-
-#### Folder structure
-
-This is the folder structure that comes out of the box. Feel free to change it to your needs.
-
-```
-├─ main.css
-├─ opui.css
-├─ open-props.css
-├─ core
-│  └─ normalize.css
-│  └─ utils.css
-│  └─ theme.css
-│  └─ components.css
-├─ components
-│  └─ button.css
-│  └─ ...
-
-```
-
-<div class="not-rich-text">
-<Alert severity="warning">
-<p>While many components will work as intended in modern browsers - some are using features that haven't landed outside Chromium with <strong>experimental feature flags</strong> enabled.</p>
-
-<a href="/guide/what-is-open-props-ui" class="link">About Open Props UI.</a>
-</Alert>
-
 </div>
 
 ### 3. Copy & paste

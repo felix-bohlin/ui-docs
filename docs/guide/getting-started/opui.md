@@ -1,6 +1,6 @@
 ---
 overline: Guide
-title: Open Props UI - OPUI
+title: OPUI
 description: All OPUI related imports and the necessary layer declarations.
 ---
 
