@@ -97,10 +97,6 @@ export default defineConfig({
           ],
         },
         {
-          text: "Roadmap",
-          link: "/guide/roadmap",
-        },
-        {
           text: "Acknowledgments",
           link: "/guide/acknowledgments",
         },
