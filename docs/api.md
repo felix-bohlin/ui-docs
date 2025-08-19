@@ -106,8 +106,6 @@ title: Component API
 
 <h3><span class="badge warning" aria-label="⚠️🚧"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
 
-<p>hej</p>
-
 ## Feedback
 
 ### [Alert](/components/feedback/alert)
