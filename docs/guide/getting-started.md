@@ -109,7 +109,7 @@ This is the folder structure that comes out of the box. Feel free to change it t
 
 ### 3. Copy & paste
 
-Browse [all the components](/components/button).
+Browse [all the components](/components).
 
 **Copy and paste** the HTML and CSS (see the "Installation" section on each component page) and you're good to go!
 
