@@ -11,7 +11,7 @@ hero:
       link: /guide/getting-started
     - theme: outlined
       text: Components
-      link: /components/button
+      link: /components
     - theme: outlined
       text: Github
       link: https://github.com/felix-bohlin/ui
