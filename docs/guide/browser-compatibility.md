@@ -57,16 +57,11 @@ const filteredIds = computed(() => {
   		:aria-selected="activeToggle === button.id ? 'true' : 'false'"
       :id="`underlined-tab-${button.id}`"
       role="tab"
-      aria-controls="tabpanel-1"
       :tabindex="activeToggle === button.id ? 0 : -1"
     >
       {{ button.label }}
     </button>
   </div>
 </nav>
-
-
-
-
 
 <Baseline :ids="filteredIds" />
