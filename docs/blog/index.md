@@ -12,6 +12,7 @@ const { allPosts: posts } = usePosts();
 <hgroup>
 <p>Blog</p>
 <h1>Developer blog</h1>
+<p>Irregular devlog from the work on Open Props UI.</p>
 </hgroup>
 
 <div class="posts not-rich-text">
@@ -22,5 +23,6 @@ const { allPosts: posts } = usePosts();
 	.posts {
 		display:grid;
 		gap: var(--size-3);
+		margin-block-start: var(--size-8);
 	}
 </style>
