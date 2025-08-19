@@ -32,7 +32,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
-      pattern: "https://github.com/felix-bohlin/ui/tree/main/docs/:path",
+      pattern: "https://github.com/felix-bohlin/ui-docs/tree/main/docs/:path",
     },
     outline: "deep",
     search: {
