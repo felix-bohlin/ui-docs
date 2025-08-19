@@ -18,6 +18,7 @@ import Alert from "../.vitepress/theme/app/components/Alert.vue";
 <span></span>
 
 You can choose between:
+
 - [manual setup](#manual-setup) (more fun, recommended)
 - [npm installation](#npm-installation) (a lot less fun, recommended)
 
@@ -27,8 +28,6 @@ This guide will set you up with:
 - a normalize
 - some util classes
 - base theme setup
-
-
 
 <div class="not-rich-text">
 
@@ -57,18 +56,32 @@ The setup process will differ a bit if you use a framework, but the core princip
 
 <div class="not-rich-text">
 
-`main.css` is the home of all your CSS.
+<ul class="definition-list dotted">
+  <li>
+    <span class="term"><code>main.css</code></span>
+    <hr>
+    <span class="description">is the home of all your CSS</span>
+  </li>
+  <li>
+    <span class="term"><code>opui.css</code></span>
+    <hr>
+    <span class="description">consists of OPUI imports, only</span>
+  </li>
+  <li>
+    <span class="term"><code>open-props.css</code></span>
+    <hr>
+    <span class="description">consists of Open Props imports, only</span>
+  </li>
+</ul>
+
 ::: code-group [main.css]
 <<< @/../node_modules/opui-css/src/main.css [main.css]
-:::
-
-`opui.css` consists of OPUI imports, only.
-::: code-group [opui.css]
 <<< @/../node_modules/opui-css/src/opui.css [opui.css]
+<<< @/../node_modules/opui-css/src/open-props.css [open-props.css]
 :::
 
 <Accordion variant="tonal" style="margin-block-start: var(--size-3)">
-<template #summary>OPUI core</template>
+<template #summary>src/core</template>
 
 ::: code-group
 <<< @/../node_modules/opui-css/src/core/normalize.css [normalize.css]
@@ -87,6 +100,7 @@ This is the folder structure that comes out of the box. Feel free to change it t
 ```
 ├─ main.css
 ├─ opui.css
+├─ open-props.css
 ├─ core
 │  └─ normalize.css
 │  └─ utils.css
@@ -113,7 +127,6 @@ Browse [all the components](/components).
 
 **Copy and paste** the HTML and CSS (see the "Installation" section on each component page) and you're good to go!
 
-
 ## NPM installation
 
 ```sh
@@ -125,3 +138,9 @@ npm i opui-css -S
 ```
 
 Then check your `node_modules` folder for the `opui-css` package and pick and choose what files you want to use!
+
+The `dist` folder includes bundled files with:
+
+- `dist/op.css` all the needed `Open Props` imports
+- `dist/ui.css` the entire `OPUI` library
+- `dist/op+ui.css` both files above combined
