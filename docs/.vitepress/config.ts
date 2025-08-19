@@ -43,7 +43,7 @@ export default defineConfig({
     },
     nav: [
       { text: "Guide", link: "/guide/getting-started" },
-      { text: "Components", link: "/components/button" },
+      { text: "Components", link: "/components" },
       { text: "API", link: "/api" },
       { text: "Blog", link: "/blog" },
       { text: "Open Props", link: "https://open-props.style/" },
