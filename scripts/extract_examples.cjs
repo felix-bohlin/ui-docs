@@ -164,7 +164,7 @@ function renderAggregatedExamples(examplesByFile) {
 
   parts.push(
     `<nav>` +
-      `<h2>Table of contents</h2>` +
+      `<h2>Components</h2>` +
       `<ul>` +
       tocItems
         .map(
