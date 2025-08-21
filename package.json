@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "html:generate": "node scripts/extract_examples.cjs"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
