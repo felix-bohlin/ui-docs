@@ -30,6 +30,15 @@ async function main() {
   // 2) Extract examples from each file
   const examplesByFile = []
   for (const filePath of mdFiles.sort()) {
+    // Skip rich-text.md as it contains problematic markdown structure
+    // Skip tooltip.md as requested
+    if (
+      path.basename(filePath) === "rich-text.md" ||
+      path.basename(filePath) === "tooltip.md"
+    ) {
+      continue
+    }
+
     const content = await fs.readFile(filePath, "utf8")
     const examples = extractExampleBlocks(content)
       // Skip any example block that references the ListAll component
@@ -47,9 +56,9 @@ async function main() {
   // 3) Render aggregated HTML
   const aggregated = renderAggregatedExamples(examplesByFile)
 
-  // 4) Inject into index.html (replace <body>...</body> content only)
+  // 4) Inject into index.html (replace examples container content only)
   let indexHtml = await fs.readFile(indexPath, "utf8")
-  indexHtml = replaceBodyContent(indexHtml, aggregated)
+  indexHtml = replaceExamplesContainer(indexHtml, aggregated)
 
   // 5) Write back index.html
   await fs.writeFile(indexPath, indexHtml, "utf8")
@@ -102,8 +111,26 @@ function extractExampleBlocks(markdown) {
   const re = /<template\s+#example>([\s\S]*?)<\/template>/gi
   let match
   while ((match = re.exec(markdown)) !== null) {
-    const inner = match[1].trim()
-    if (inner) results.push(inner)
+    let inner = match[1].trim()
+    if (inner) {
+      // Skip examples that contain elements with "anatomy" class
+      if (
+        inner.includes('class="anatomy"') ||
+        inner.includes("class='anatomy'") ||
+        (inner.includes("anatomy") && inner.includes("class="))
+      ) {
+        continue
+      }
+
+      // Remove all :class attributes (Vue dynamic class bindings)
+      inner = inner.replace(/:class="[^"]*"/g, "")
+      inner = inner.replace(/:class='[^']*'/g, "")
+
+      // Clean up any extra whitespace that might be left after removing attributes
+      inner = inner.replace(/\s+/g, " ").trim()
+
+      results.push(inner)
+    }
   }
   return results
 }
@@ -137,7 +164,7 @@ function renderAggregatedExamples(examplesByFile) {
 
   parts.push(
     `<nav>` +
-      `<h1 class="h3 toc-title">Table of contents</h1>` +
+      `<h2>Table of contents</h2>` +
       `<ul>` +
       tocItems
         .map(
@@ -179,25 +206,23 @@ function renderAggregatedExamples(examplesByFile) {
 }
 
 /**
- * Replaces the content between <body ...> and </body> while preserving attributes.
+ * Replaces the content of the examples container div while preserving other body content.
  */
-function replaceBodyContent(html, newBodyInner) {
-  const bodyOpenRe = /<body[^>]*>/i
-  const bodyCloseRe = /<\/body>/i
+function replaceExamplesContainer(html, newContent) {
+  const containerStartRe = /<div id="examples-container"[^>]*>/i
+  const containerEndRe = /<\/div>\s*<!--\s*End Examples Container\s*-->/i
 
-  const openMatch = html.match(bodyOpenRe)
-  const closeMatch = html.match(bodyCloseRe)
+  const startMatch = html.match(containerStartRe)
+  const endMatch = html.match(containerEndRe)
 
-  if (!openMatch || !closeMatch) {
-    throw new Error("Could not find <body> tags in index.html")
+  if (!startMatch || !endMatch) {
+    throw new Error("Could not find examples container div in index.html")
   }
 
-  const startIdx = openMatch.index + openMatch[0].length
-  const endIdx = closeMatch.index
+  const startIdx = startMatch.index + startMatch[0].length
+  const endIdx = endMatch.index
 
-  return (
-    html.slice(0, startIdx) + "\n" + newBodyInner + "\n" + html.slice(endIdx)
-  )
+  return html.slice(0, startIdx) + "\n" + newContent + "\n" + html.slice(endIdx)
 }
 
 /**
