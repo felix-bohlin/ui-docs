@@ -137,22 +137,22 @@
   color: var(--vp-code-color);
 } */
 
-.vp-doc a > code {
+:where(.vp-doc, .VPPage) a > code {
   color: var(--vp-code-link-color);
 }
 
-.vp-doc a:hover > code {
+:where(.vp-doc, .VPPage) a:hover > code {
   color: var(--vp-code-link-hover-color);
 }
 
-/* .vp-doc h1 > code,
-.vp-doc h2 > code,
-.vp-doc h3 > code,
-.vp-doc h4 > code {
+/* :where(.vp-doc,.VPPage) h1 > code,
+:where(.vp-doc,.VPPage) h2 > code,
+:where(.vp-doc,.VPPage) h3 > code,
+:where(.vp-doc,.VPPage) h4 > code {
   font-size: 0.9em;
 } */
 
-.vp-doc div[class*="language-"],
+:where(.vp-doc, .VPPage) div[class*="language-"],
 .vp-block {
   position: relative;
   margin: 16px 0;
@@ -166,26 +166,29 @@
 }
 
 @media (min-width: 640px) {
-  .vp-doc div[class*="language-"],
+  :where(.vp-doc, .VPPage) div[class*="language-"],
   .vp-block {
     border-radius: var(--border-radius, 0.25rem);
   }
 }
 
 @media (max-width: 639px) {
-  .vp-doc li div[class*="language-"] {
+  :where(.vp-doc, .VPPage) li div[class*="language-"] {
     border-radius: 8px 0 0 8px;
   }
 }
 
-.vp-doc div[class*="language-"] + div[class*="language-"],
-.vp-doc div[class$="-api"] + div[class*="language-"],
-.vp-doc div[class*="language-"] + div[class$="-api"] > div[class*="language-"] {
+:where(.vp-doc, .VPPage) div[class*="language-"] + div[class*="language-"],
+:where(.vp-doc, .VPPage) div[class$="-api"] + div[class*="language-"],
+:where(.vp-doc, .VPPage)
+  div[class*="language-"]
+  + div[class$="-api"]
+  > div[class*="language-"] {
   margin-block-start: -8px;
 }
 
-.vp-doc [class*="language-"] pre,
-.vp-doc [class*="language-"] code {
+:where(.vp-doc, .VPPage) [class*="language-"] pre,
+:where(.vp-doc, .VPPage) [class*="language-"] code {
   background-color: inherit;
   cursor: default;
   /*rtl:ignore*/
@@ -205,7 +208,7 @@
   hyphens: none;
 }
 
-.vp-doc [class*="language-"] pre {
+:where(.vp-doc, .VPPage) [class*="language-"] pre {
   position: relative;
   z-index: 1;
   margin: 0;
@@ -215,7 +218,7 @@
   overflow-x: auto;
 }
 
-.vp-doc [class*="language-"] code {
+:where(.vp-doc, .VPPage) [class*="language-"] code {
   display: block;
   padding: 0 24px;
   inline-size: fit-content;
@@ -226,7 +229,7 @@
   transition: color 0.5s;
 }
 
-.vp-doc [class*="language-"] code .highlighted {
+:where(.vp-doc, .VPPage) [class*="language-"] code .highlighted {
   background-color: var(--vp-code-line-highlight-color);
   transition: background-color 0.5s;
   margin: 0 -24px;
@@ -235,15 +238,15 @@
   display: inline-block;
 }
 
-.vp-doc [class*="language-"] code .highlighted.error {
+:where(.vp-doc, .VPPage) [class*="language-"] code .highlighted.error {
   background-color: var(--vp-code-line-error-color);
 }
 
-.vp-doc [class*="language-"] code .highlighted.orange {
+:where(.vp-doc, .VPPage) [class*="language-"] code .highlighted.orange {
   background-color: var(--vp-code-line-warning-color);
 }
 
-.vp-doc [class*="language-"] code .diff {
+:where(.vp-doc, .VPPage) [class*="language-"] code .diff {
   transition: background-color 0.5s;
   margin: 0 -24px;
   padding: 0 24px;
@@ -251,12 +254,15 @@
   display: inline-block;
 }
 
-.vp-doc [class*="language-"] code .diff:before {
+:where(.vp-doc, .VPPage) [class*="language-"] code .diff:before {
   position: absolute;
   left: 10px;
 }
 
-.vp-doc [class*="language-"] .has-focused-lines .line:not(.has-focus) {
+:where(.vp-doc, .VPPage)
+  [class*="language-"]
+  .has-focused-lines
+  .line:not(.has-focus) {
   filter: blur(0.095rem);
   opacity: 0.4;
   transition:
@@ -264,43 +270,49 @@
     opacity 0.35s;
 }
 
-.vp-doc [class*="language-"] .has-focused-lines .line:not(.has-focus) {
+:where(.vp-doc, .VPPage)
+  [class*="language-"]
+  .has-focused-lines
+  .line:not(.has-focus) {
   opacity: 0.7;
   transition:
     filter 0.35s,
     opacity 0.35s;
 }
 
-.vp-doc [class*="language-"]:hover .has-focused-lines .line:not(.has-focus) {
+:where(.vp-doc, .VPPage)
+  [class*="language-"]:hover
+  .has-focused-lines
+  .line:not(.has-focus) {
   filter: blur(0);
   opacity: 1;
 }
 
-.vp-doc [class*="language-"] code .diff.remove {
+:where(.vp-doc, .VPPage) [class*="language-"] code .diff.remove {
   background-color: var(--vp-code-line-diff-remove-color);
   opacity: 0.7;
 }
 
-.vp-doc [class*="language-"] code .diff.remove:before {
+:where(.vp-doc, .VPPage) [class*="language-"] code .diff.remove:before {
   content: "-";
   color: var(--vp-code-line-diff-remove-symbol-color);
 }
 
-.vp-doc [class*="language-"] code .diff.add {
+:where(.vp-doc, .VPPage) [class*="language-"] code .diff.add {
   background-color: var(--vp-code-line-diff-add-color);
 }
 
-.vp-doc [class*="language-"] code .diff.add:before {
+:where(.vp-doc, .VPPage) [class*="language-"] code .diff.add:before {
   content: "+";
   color: var(--vp-code-line-diff-add-symbol-color);
 }
 
-.vp-doc div[class*="language-"].line-numbers-mode {
+:where(.vp-doc, .VPPage) div[class*="language-"].line-numbers-mode {
   /*rtl:ignore*/
   padding-inline-start: 32px;
 }
 
-.vp-doc .line-numbers-wrapper {
+:where(.vp-doc, .VPPage) .line-numbers-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -321,7 +333,7 @@
     color 0.5s;
 }
 
-.vp-doc [class*="language-"] > :is(button.copy) {
+:where(.vp-doc, .VPPage) [class*="language-"] > :is(button.copy) {
   /*rtl:ignore*/
   direction: ltr;
   position: absolute;
@@ -346,27 +358,29 @@
     opacity 0.25s;
 }
 
-.vp-doc [class*="language-"]:hover > button.copy,
-.vp-doc [class*="language-"] > button.copy:focus {
+:where(.vp-doc, .VPPage) [class*="language-"]:hover > button.copy,
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy:focus {
   opacity: 1;
 }
 
-.vp-doc [class*="language-"] > button.copy:hover,
-.vp-doc [class*="language-"] > button.copy.copied {
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy:hover,
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy.copied {
   border-color: var(--vp-code-copy-code-hover-border-color);
   background-color: var(--vp-code-copy-code-hover-bg);
 }
 
-.vp-doc [class*="language-"] > button.copy.copied,
-.vp-doc [class*="language-"] > button.copy:hover.copied {
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy.copied,
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy:hover.copied {
   /*rtl:ignore*/
   border-radius: 0 4px 4px 0;
   background-color: var(--vp-code-copy-code-hover-bg);
   background-image: var(--vp-icon-copied);
 }
 
-.vp-doc [class*="language-"] > button.copy.copied:before,
-.vp-doc [class*="language-"] > button.copy:hover.copied:before {
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy.copied:before,
+:where(.vp-doc, .VPPage)
+  [class*="language-"]
+  > button.copy:hover.copied:before {
   position: relative;
   top: -1px;
   /*rtl:ignore*/
@@ -390,12 +404,12 @@
   content: var(--vp-code-copy-copied-text-content);
 }
 
-.vp-doc [class*="language-"]:hover > button.copy + span.lang,
-.vp-doc [class*="language-"] > button.copy:focus + span.lang {
+:where(.vp-doc, .VPPage) [class*="language-"]:hover > button.copy + span.lang,
+:where(.vp-doc, .VPPage) [class*="language-"] > button.copy:focus + span.lang {
   opacity: 0;
 }
 
-.vp-doc [class*="language-"] > span.lang {
+:where(.vp-doc, .VPPage) [class*="language-"] > span.lang {
   position: absolute;
   top: 2px;
   /*rtl:ignore*/
@@ -409,11 +423,11 @@
     opacity 0.4s;
 }
 
-.main:has(.vp-doc > div > p:first-child) {
-  .vp-doc {
+.main:has(:where(.vp-doc, .VPPage) > div > p:first-child) {
+  :where(.vp-doc, .VPPage) {
     margin-block-start: 0;
   }
-  .vp-doc > div > p:first-child {
+  :where(.vp-doc, .VPPage) > div > p:first-child {
     color: oklch(from currentColor l c h / 75%);
     font-size: var(--font-size-lg);
     line-height: 1.6;

@@ -143,6 +143,10 @@ const showCode = ref(!props?.hideCode)
     }
   }
 
+  .vp-code-group {
+    margin-block-start: 0;
+  }
+
   .vp-code-group .tabs {
     border-top-left-radius: 0;
     border-top-right-radius: 0;

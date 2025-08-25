@@ -53,7 +53,7 @@ const pageName = computed(() =>
         <div class="content">
           <div class="content-container">
             <slot name="doc-before" />
-            <main class="main rich-text">
+            <main class="main">
               <hgroup
                 v-if="
                   !$frontmatter.hideHeadings &&
@@ -69,7 +69,7 @@ const pageName = computed(() =>
                 </p>
               </hgroup>
               <Content
-                class="vp-doc"
+                class="vp-doc rich-text"
                 :class="[
                   pageName,
                   theme.externalLinkIcon && 'external-link-icon-enabled',
