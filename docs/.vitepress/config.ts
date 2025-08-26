@@ -162,6 +162,26 @@ export default defineConfig({
           ],
         },
       ],
+      "/blocks": [
+        {
+          text: "Setup",
+          items: [
+            {
+              text: "Getting started",
+              link: "/blocks/getting-started",
+            },
+          ],
+        },
+        {
+          text: "Blocks",
+          items: [
+            {
+              text: "Teaser",
+              link: "/blocks/teaser",
+            },
+          ],
+        },
+      ],
     },
 
     socialLinks: [

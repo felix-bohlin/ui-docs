@@ -1,27 +1,59 @@
 ---
-overline: Getting started
 title: Blocks
-description: Ready-made components made with OPUI
+description: Here are all OPUI blocks. More blocks are continuously being added!
 ---
 
-You can choose between:
+<script setup>
+  import {useData} from "vitepress"
 
-- [Manual setup](#manual-setup) (more fun, recommended)
-- [NPM installation](#npm-installation) (a lot less fun)
-- [CDN](#cdn) (not fun either but good for quick prototyping)
+  const { theme} = useData()
 
-## Manual installation
+  const blocks = theme.value.sidebar["/blocks"].find((item) => item.text === "Blocks")?.items
+</script>
 
-### 1. Prerequisites
-If you haven't gotten Open Props UI setup yet, [do that first](/guide/getting-started) and then return.
+<style scoped>
+  .card-grid {
+    display: grid;
+    gap: var(--size-3);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    align-items: stretch;
+    margin-block-start: var(--size-3);
+  }
 
-### 2. Base setup
+  .card-grid a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
 
+  .card:hover {
+    p {
+      text-decoration: underline;
+    }
+  }
 
+  .card-grid a.card .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-## NPM installation
+  .card-grid a.card .content p {
+    margin: 0;
+  }
 
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
 
-## CDN
-
-https://cdn.jsdelivr.net/npm/opui-blocks/
+<ul class="card-grid">
+  <li v-for="block in blocks">
+  <a :href="block.link" class="card outlined">
+    <div class="content">
+      <p>{{block.text}}</p>
+    </div>
+  </a>
+  </li>
+</ul>
