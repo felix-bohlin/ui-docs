@@ -51,8 +51,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.2
       opui-blocks:
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.2.0
+        version: 0.2.0
       opui-css:
         specifier: ^2.2.2
         version: 2.2.2
@@ -1203,8 +1203,8 @@ packages:
   oniguruma-to-es@4.3.3:
     resolution: {integrity: sha512-rPiZhzC3wXwE59YQMRDodUwwT9FZ9nNBwQQfsd1wfdtlKEyCdRV0avrTcSZ5xlIvGRVPd/cx6ZN45ECmS39xvg==}
 
-  opui-blocks@0.1.6:
-    resolution: {integrity: sha512-M14qlSVYdB5XdA/c0qbE31OIalUl1th7m+f+EKs3Ae8ZhO0A1GsFNppbdr2H0mGFmXfId15OzcWGSlAS4mv3tw==, tarball: https://registry.npmjs.org/opui-blocks/-/opui-blocks-0.1.6.tgz}
+  opui-blocks@0.2.0:
+    resolution: {integrity: sha512-WO0aN08a0eLy+oGhZTlWhGsk4RU7ktP1d/5SVpccfsuXHCiwE1OiBlPBRiK0Y7B59rTB0Q3lT4U+gRIeF7QPmg==, tarball: https://registry.npmjs.org/opui-blocks/-/opui-blocks-0.2.0.tgz}
 
   opui-css@2.2.2:
     resolution: {integrity: sha512-0NzFuPWelzC9ryISYuWgBcmsM5hviGstZih1vlUUEnzIqpbgwnCHocqSgrk1t9VOuX4OfFUXUjnzE27c2JneWA==}
@@ -2450,7 +2450,7 @@ snapshots:
       regex: 6.0.1
       regex-recursion: 6.0.2
 
-  opui-blocks@0.1.6:
+  opui-blocks@0.2.0:
     dependencies:
       opui-css: 2.2.2
 

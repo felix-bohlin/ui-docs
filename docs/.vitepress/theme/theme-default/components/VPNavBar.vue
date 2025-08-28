@@ -186,7 +186,7 @@ watchPostEffect(() => {
   .VPNavBar.has-sidebar .content {
     position: relative;
     z-index: 1;
-    padding-inline-end: 32px;
+    padding-inline-end: 16px;
     padding-inline-start: var(--vp-sidebar-width);
   }
 }
@@ -212,6 +212,7 @@ watchPostEffect(() => {
   .VPNavBar:not(.home.top) .content-body {
     position: relative;
     background-color: var(--vp-nav-bg-color);
+    padding-inline-end: 16px;
   }
 
   .VPNavBar:not(.has-sidebar):not(.home.top) .content-body {
