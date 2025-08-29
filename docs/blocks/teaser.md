@@ -2,6 +2,7 @@
 overline: Blocks
 title: Teaser
 layout: page
+hasAside: true
 ---
 
 <script setup>
@@ -19,7 +20,7 @@ import Baseline from "../.vitepress/theme/app/components/Baseline.vue"
         <p>Our teasers are only made from high-quality teaser ingredients.</p>
       </div>
       <picture>
-        <img src="https://picsum.photos/700" />
+        <img src="/background.jpg" alt="Calm body of water" />
       </picture>
     </div>
   </template>
@@ -38,7 +39,7 @@ import Baseline from "../.vitepress/theme/app/components/Baseline.vue"
     </div>
 
     <picture>
-      <img src="https://picsum.photos/700" />
+      <img src="/background.jpg" alt="Calm body of water" />
     </picture>
   </div>
   ```
@@ -59,7 +60,7 @@ You can add a link or a button inside the `.actions` wrapper.
         </div>
       </div>
       <picture>
-        <img src="https://picsum.photos/700" />
+        <img src="/background.jpg" alt="Calm body of water" />
       </picture>
     </div>
   </template>
@@ -78,7 +79,7 @@ You can add a link or a button inside the `.actions` wrapper.
     </div>
 
     <picture>
-      <img src="https://picsum.photos/700" />
+      <img src="/background.jpg" alt="Calm body of water" />
     </picture>
   </div>
   ```
@@ -92,7 +93,7 @@ Just swap the `.content` and the media around.
 	<template #example>
 	<div class="container teaser">
       <picture>
-        <img src="https://picsum.photos/700" />
+        <img src="/background.jpg" alt="Calm body of water" />
       </picture>
       <div class="content">
         <h2>Media first</h2>
@@ -150,7 +151,7 @@ If you want to keep the media below your content when elemenst start stacking, u
         </div>
       </div>
       <picture>
-        <img src="https://picsum.photos/700" />
+        <img src="/background.jpg" alt="Calm body of water" />
       </picture>
     </div>
   </template>
@@ -180,7 +181,7 @@ By default everything is vertically centered, but you can use the `.align-top` c
         </div>
       </div>
       <picture>
-        <img src="https://picsum.photos/700" />
+        <img src="/background.jpg" alt="Calm body of water" />
       </picture>
     </div>
   </template>
@@ -212,7 +213,7 @@ By default everything is vertically centered, but you can use the `.align-top` c
         </div>
       </div>
       <picture>
-        <img src="https://picsum.photos/700" />
+        <img src="/background.jpg" alt="Calm body of water" />
       </picture>
     </div>
   </template>
@@ -230,7 +231,7 @@ By default everything is vertically centered, but you can use the `.align-top` c
     </div>
 
     <picture>
-      <img src="https://picsum.photos/700" />
+      <img src="/background.jpg" alt="Calm body of water" />
     </picture>
   </div>
   ```

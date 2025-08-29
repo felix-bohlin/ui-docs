@@ -8,7 +8,7 @@ description: Here are all OPUI components. More components are continuously bein
 
   const { theme} = useData()
 
-  const components = theme.value.sidebar["/components"][0].items
+  const components = theme.value.sidebar["/components"][1].items
 </script>
 
 <style scoped>

@@ -54,11 +54,8 @@ export default defineConfig({
       "/guide": [
         {
           text: "Guide",
+          collapsed: true,
           items: [
-            {
-              text: "What is Open Props UI?",
-              link: "/guide/what-is-open-props-ui",
-            },
             {
               text: "Getting started",
               link: "/guide/getting-started",
@@ -92,17 +89,71 @@ export default defineConfig({
               ],
             },
             {
+              text: "What is Open Props UI?",
+              link: "/guide/what-is-open-props-ui",
+            },
+            {
               text: "Browser compatibility",
               link: "/guide/browser-compatibility",
             },
+            {
+              text: "Acknowledgments",
+              link: "/guide/acknowledgments",
+            },
           ],
-        },
-        {
-          text: "Acknowledgments",
-          link: "/guide/acknowledgments",
         },
       ],
       "/components": [
+        {
+          text: "Guide",
+          collapsed: true,
+          items: [
+            {
+              text: "Getting started",
+              link: "/guide/getting-started",
+              items: [
+                {
+                  text: "Main",
+                  link: "/guide/getting-started/main",
+                },
+                {
+                  text: "OPUI",
+                  link: "/guide/getting-started/opui",
+                  items: [
+                    {
+                      text: "Normalize",
+                      link: "/guide/getting-started/normalize",
+                    },
+                    {
+                      text: "Utils",
+                      link: "/guide/getting-started/utils",
+                    },
+                    {
+                      text: "Theme",
+                      link: "/guide/getting-started/theme",
+                    },
+                    {
+                      text: "Components",
+                      link: "/guide/getting-started/components",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              text: "What is Open Props UI?",
+              link: "/guide/what-is-open-props-ui",
+            },
+            {
+              text: "Browser compatibility",
+              link: "/guide/browser-compatibility",
+            },
+            {
+              text: "Acknowledgments",
+              link: "/guide/acknowledgments",
+            },
+          ],
+        },
         {
           text: "Components",
           items: [
@@ -164,7 +215,7 @@ export default defineConfig({
       ],
       "/blocks": [
         {
-          text: "Setup",
+          text: "Guide",
           items: [
             {
               text: "Getting started",

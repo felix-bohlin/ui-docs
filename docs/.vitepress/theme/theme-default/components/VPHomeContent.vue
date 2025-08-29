@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useWindowSize } from "@vueuse/core";
+import { useWindowSize } from "@vueuse/core"
 
 const { width: vw } = useWindowSize({
   initialWidth: 0,
   includeScrollbar: false,
-});
+})
 </script>
 
 <template>
   <div
-    class="vp-doc container"
+    class="vp-doc vp-container"
     :style="vw ? { '--vp-offset': `calc(50% - ${vw / 2}px)` } : {}"
   >
     <slot />
@@ -17,7 +17,7 @@ const { width: vw } = useWindowSize({
 </template>
 
 <style scoped>
-.container {
+.vp-container {
   margin: auto;
   width: 100%;
   max-width: 1280px;
@@ -25,13 +25,13 @@ const { width: vw } = useWindowSize({
 }
 
 @media (min-width: 640px) {
-  .container {
+  .vp-container {
     padding: 0 48px;
   }
 }
 
 @media (min-width: 960px) {
-  .container {
+  .vp-container {
     width: 100%;
     padding: 0 64px;
   }

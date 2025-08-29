@@ -39,7 +39,7 @@ watchPostEffect(() => {
 <template>
   <div class="VPNavBar" :class="classes">
     <div class="wrapper">
-      <div class="container">
+      <div class="nav-container">
         <div class="title">
           <VPNavBarTitle>
             <template #nav-bar-title-before
@@ -122,7 +122,7 @@ watchPostEffect(() => {
   }
 }
 
-.container {
+.nav-container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -131,17 +131,17 @@ watchPostEffect(() => {
   pointer-events: none;
 }
 
-.container > .title,
-.container > .content {
+.nav-container > .title,
+.nav-container > .content {
   pointer-events: none;
 }
 
-.container :deep(*) {
+.nav-container :deep(*) {
   pointer-events: auto;
 }
 
 @media (min-width: 960px) {
-  .VPNavBar.has-sidebar .container {
+  .VPNavBar.has-sidebar .nav-container {
     max-width: 100%;
   }
 }

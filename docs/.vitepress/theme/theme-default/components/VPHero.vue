@@ -25,7 +25,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
 
 <template>
   <div class="VPHero" :class="{ 'has-image': image || heroImageSlotExists }">
-    <div class="container">
+    <div class="vp-container">
       <div class="main">
         <slot name="home-hero-info-before" />
         <slot name="home-hero-info">
@@ -97,7 +97,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
   }
 }
 
-.container {
+.vp-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -105,8 +105,8 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
 }
 
 @media (min-width: 960px) {
-  .container {
-    flex-direction: row;
+  .VPHero.has-image .vp-container {
+    text-align: center;
   }
 }
 
@@ -118,14 +118,11 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
   flex-shrink: 0;
 }
 
-.VPHero.has-image .container {
+.VPHero.has-image .vp-container {
   text-align: center;
 }
 
 @media (min-width: 960px) {
-  .VPHero.has-image .container {
-    text-align: start;
-  }
 }
 
 @media (min-width: 960px) {

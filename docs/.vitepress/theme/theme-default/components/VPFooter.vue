@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useData } from "../composables/data";
-import { useSidebar } from "../composables/sidebar";
+import { useData } from "../composables/data"
+import { useSidebar } from "../composables/sidebar"
 
-const { theme, frontmatter } = useData();
-const { hasSidebar } = useSidebar();
+const { theme, frontmatter } = useData()
+const { hasSidebar } = useSidebar()
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const { hasSidebar } = useSidebar();
     class="VPFooter"
     :class="{ 'has-sidebar': hasSidebar }"
   >
-    <div class="container">
+    <div class="vp-container">
       <p
         v-if="theme.footer.message"
         class="message"
@@ -56,7 +56,7 @@ const { hasSidebar } = useSidebar();
   }
 }
 
-.container {
+.vp-container {
   margin: 0 auto;
   max-width: var(--vp-layout-max-width);
   text-align: center;
