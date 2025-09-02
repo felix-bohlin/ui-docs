@@ -1,6 +1,7 @@
 ---
 overline: Components
 title: Accordion
+description: Leverages the HTML `details` and `summary` elements.
 ---
 
 <script setup>
@@ -42,7 +43,7 @@ title: Accordion
 }
 </style>
 
-Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow, check out how to add your own [custom arrow](#custom-arrow).
+
 
 ## Basics
 

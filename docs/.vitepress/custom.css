@@ -50,6 +50,10 @@ html {
   }
 }
 
+hgroup + .vp-doc {
+  margin-block-start: var(--size-6);
+}
+
 @keyframes grow-progress {
   from {
     transform: scaleX(0);
