@@ -1,6 +1,7 @@
 ---
 overline: Components
-title: Tab buttons
+title: Tabs
+description: Layered content displayed one at a time.
 ---
 
 <script setup>
@@ -30,36 +31,27 @@ title: Tab buttons
 
 <Example>
 <template #example>
-<nav class="tabs underlined">
-  <div role="tablist" aria-label="Underlined tabs">
-    <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
-      Profile
-    </button>
-    <button id="underlined-tab-2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
-      Settings
-    </button>
-    <button id="underlined-tab-3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
-      Notifications
-    </button>
+
+<div class="tabs">
+  <div class="underlined" aria-label="Underlined tabs example" role="tablist">
+    <label><input type="radio" name="tabs-underlined" id="profile" checked>Profile</label>
+    <label><input type="radio" name="tabs-underlined" id="settings">Settings</label>
+    <label><input type="radio" name="tabs-underlined" id="notifications">Notifications</label>
   </div>
-</nav>
+
+  <div id="tab-profile" role="tabpanel">profile</div>
+  <div id="tab-settings" role="tabpanel">settings</div>
+  <div id="tab-notification" role="tabpanel">notification</div>
+</div>
 </template>
 <template #code>
 
 ```html
-<nav class="tabs underlined">
-  <div role="tablist" aria-label="Underlined tabs">
-    <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
-      Profile
-    </button>
-    <button id="underlined-tab-2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
-      Settings
-    </button>
-    <button id="underlined-tab-3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
-      Notifications
-    </button>
-  </div>
-</nav>
+<div class=" underlined" aria-label="Radio tabs example" role="tablist">
+  <label><input type="radio" name="tabs-underlined" id="profile" checked>Profile</label>
+  <label><input type="radio" name="tabs-underlined" id="settings">Settings</label>
+  <label><input type="radio" name="tabs-underlined" id="notifications">Notifications</label>
+</div>
 ```
 </template>
 </Example>
@@ -68,72 +60,20 @@ title: Tab buttons
 
 <Example>
 <template #example>
-<nav class="tabs filled">
-  <div role="tablist" aria-label="Filled tabs">
-    <button
-      id="filled-tab-1"
-      role="tab"
-      aria-controls="tabpanel-1"
-      aria-selected="true"
-      tabindex="0"
-    >
-      Korg
-    </button>
-    <button
-      id="filled-tab-2"
-      role="tab"
-      aria-controls="tabpanel-2"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Yamaha
-    </button>
-    <button
-      id="filled-tab-3"
-      role="tab"
-      aria-controls="tabpanel-3"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Roland
-    </button>
+  <div class=" filled" aria-label="Radio tabs example" role="tablist">
+    <label><input type="radio" name="tabs-filled" id="korg" checked>Korg</label>
+    <label><input type="radio" name="tabs-filled" id="yamaha">Yamaha</label>
+    <label><input type="radio" name="tabs-filled" id="roland">Roland</label>
   </div>
-</nav>
 </template>
 <template #code>
 
 ```html
-<nav class="tabs filled">
-  <div role="tablist" aria-label="Filled tabs">
-    <button
-      id="filled-tab-1"
-      role="tab"
-      aria-controls="tabpanel-1"
-      aria-selected="true"
-      tabindex="0"
-    >
-      Korg
-    </button>
-    <button
-      id="filled-tab-2"
-      role="tab"
-      aria-controls="tabpanel-2"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Yamaha
-    </button>
-    <button
-      id="filled-tab-3"
-      role="tab"
-      aria-controls="tabpanel-3"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Roland
-    </button>
-  </div>
-</nav>
+<div class=" filled" aria-label="Radio tabs example" role="tablist">
+  <label><input type="radio" name="tabs-filled" id="korg" checked>Korg</label>
+  <label><input type="radio" name="tabs-filled" id="yamaha">Yamaha</label>
+  <label><input type="radio" name="tabs-filled" id="roland">Roland</label>
+</div>
 ```
 </template>
 </Example>
@@ -146,9 +86,6 @@ Tab buttons must contain the following:
 | --------------- | -------------- | ---------------------------------- |
 | `role`          | `"tab"`        | Identifies the element as a tab    |
 | `id`            | `"TAB_ID"`     | A unique ID for the tab            |
-| `aria-selected` | `"true/false"` | Indicates if the tab is selected   |
-| `aria-controls` | `"panel-id"`   | The ID of the associated tab panel |
-| `tabindex`      | `"0/-1"`       | Indicates if the tab is focusable  |
 
 ### Tab panel
 
@@ -169,8 +106,44 @@ Tab panels must contain the following:
 
 There's a lot more. Read about it [here](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-automatic/#accessibilityfeatures).
 
+
+## Anatomy
+
+1. Container: `<div class="" role="tablist">` groups the tabs.
+2. Tab: `<label>` clickable surface (click/press selects the underlying radio).
+3. Radio input: `<input type="radio" name="…">` holds selection state (only one checked per `name` group).
+4. Label: Text (or icon + optional text) inside the `<label>` after the input.
+
+<Example column>
+<template #example>
+  <div class=" underlined anatomy" role="tablist" aria-label="Anatomy example">
+    <label><input type="radio" name="anatomy-tabs" id="tab-1" checked>Tab one</label>
+    <label><input type="radio" name="anatomy-tabs" id="tab-2">Tab two</label>
+  </div>
+</template>
+<template #code>
+
+```html
+<div class=" underlined" role="tablist">
+  <label>
+    <input type="radio" name="tabs" id="tab-1" checked>
+    Tab one
+  </label>
+  <label>
+    <input type="radio" name="tabs" id="tab-2">
+    Tab two
+  </label>
+</div>
+```
+</template>
+</Example>
+
+## API
+
+<!--@include: ./tabs-api.md -->
+
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/tab-buttons.css [tab-buttons.css]
+<!--<<< @/../node_modules/opui-css/src/components/tabs.css [tabs.css]-->
 :::

@@ -195,8 +195,8 @@ export default defineConfig({
             { text: "Spinner", link: "/components/spinner" },
             { text: "Switch", link: "/components/switch" },
             {
-              text: "Tab buttons",
-              link: "/components/tab-buttons",
+              text: "Tabs",
+              link: "/components/tabs",
             },
             { text: "Table", link: "/components/table" },
             // { text: "Tooltip", link: "/components/tooltip" },
