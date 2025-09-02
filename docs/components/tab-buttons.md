@@ -30,36 +30,20 @@ title: Tab buttons
 
 <Example>
 <template #example>
-<nav class="tabs underlined">
-  <div role="tablist" aria-label="Underlined tabs">
-    <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
-      Profile
-    </button>
-    <button id="underlined-tab-2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
-      Settings
-    </button>
-    <button id="underlined-tab-3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
-      Notifications
-    </button>
+  <div class="tab-buttons underlined" aria-label="Underlined tabs example" role="tablist">
+    <label><input type="radio" name="tabs-underlined" id="profile" checked>Profile</label>
+    <label><input type="radio" name="tabs-underlined" id="settings">Settings</label>
+    <label><input type="radio" name="tabs-underlined" id="notifications">Notifications</label>
   </div>
-</nav>
 </template>
 <template #code>
 
 ```html
-<nav class="tabs underlined">
-  <div role="tablist" aria-label="Underlined tabs">
-    <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
-      Profile
-    </button>
-    <button id="underlined-tab-2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
-      Settings
-    </button>
-    <button id="underlined-tab-3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
-      Notifications
-    </button>
-  </div>
-</nav>
+<div class="tab-buttons underlined" aria-label="Radio tabs example" role="tablist">
+  <label><input type="radio" name="tabs-underlined" id="profile" checked>Profile</label>
+  <label><input type="radio" name="tabs-underlined" id="settings">Settings</label>
+  <label><input type="radio" name="tabs-underlined" id="notifications">Notifications</label>
+</div>
 ```
 </template>
 </Example>
@@ -68,72 +52,20 @@ title: Tab buttons
 
 <Example>
 <template #example>
-<nav class="tabs filled">
-  <div role="tablist" aria-label="Filled tabs">
-    <button
-      id="filled-tab-1"
-      role="tab"
-      aria-controls="tabpanel-1"
-      aria-selected="true"
-      tabindex="0"
-    >
-      Korg
-    </button>
-    <button
-      id="filled-tab-2"
-      role="tab"
-      aria-controls="tabpanel-2"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Yamaha
-    </button>
-    <button
-      id="filled-tab-3"
-      role="tab"
-      aria-controls="tabpanel-3"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Roland
-    </button>
+  <div class="tab-buttons filled" aria-label="Radio tabs example" role="tablist">
+    <label><input type="radio" name="tabs-filled" id="korg" checked>Korg</label>
+    <label><input type="radio" name="tabs-filled" id="yamaha">Yamaha</label>
+    <label><input type="radio" name="tabs-filled" id="roland">Roland</label>
   </div>
-</nav>
 </template>
 <template #code>
 
 ```html
-<nav class="tabs filled">
-  <div role="tablist" aria-label="Filled tabs">
-    <button
-      id="filled-tab-1"
-      role="tab"
-      aria-controls="tabpanel-1"
-      aria-selected="true"
-      tabindex="0"
-    >
-      Korg
-    </button>
-    <button
-      id="filled-tab-2"
-      role="tab"
-      aria-controls="tabpanel-2"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Yamaha
-    </button>
-    <button
-      id="filled-tab-3"
-      role="tab"
-      aria-controls="tabpanel-3"
-      aria-selected="false"
-      tabindex="-1"
-    >
-      Roland
-    </button>
-  </div>
-</nav>
+<div class="tab-buttons filled" aria-label="Radio tabs example" role="tablist">
+  <label><input type="radio" name="tabs-filled" id="korg" checked>Korg</label>
+  <label><input type="radio" name="tabs-filled" id="yamaha">Yamaha</label>
+  <label><input type="radio" name="tabs-filled" id="roland">Roland</label>
+</div>
 ```
 </template>
 </Example>
