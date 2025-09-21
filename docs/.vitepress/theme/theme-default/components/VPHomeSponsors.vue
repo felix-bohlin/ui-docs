@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import VPButton from "./VPButton.vue";
-import VPSponsors from "./VPSponsors.vue";
+import VPButton from "./VPButton.vue"
+import VPSponsors from "./VPSponsors.vue"
 
 export interface Sponsors {
-  tier: string;
-  size?: "medium" | "big";
-  items: Sponsor[];
+  tier: string
+  size?: "medium" | "big"
+  items: Sponsor[]
 }
 
 export interface Sponsor {
-  name: string;
-  img: string;
-  url: string;
+  name: string
+  img: string
+  url: string
 }
 interface Props {
-  message?: string;
-  actionText?: string;
-  actionLink?: string;
-  data: Sponsors[];
+  message?: string
+  actionText?: string
+  actionLink?: string
+  data: Sponsors[]
 }
 
 withDefaults(defineProps<Props>(), {
   actionText: "Become a sponsor",
-});
+})
 </script>
 
 <template>
   <section class="VPHomeSponsors">
-    <div class="container">
+    <div class="vp-container">
       <div class="header">
         <div class="love">
           <span class="vpi-heart icon" />
@@ -78,7 +78,7 @@ withDefaults(defineProps<Props>(), {
   }
 }
 
-.container {
+.vp-container {
   margin: 0 auto;
   max-width: 1152px;
 }

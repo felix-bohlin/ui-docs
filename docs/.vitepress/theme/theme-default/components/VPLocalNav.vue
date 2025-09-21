@@ -60,7 +60,7 @@ const classes = computed(() => {
     "
     :class="classes"
   >
-    <div class="container">
+    <div class="vp-container">
       <button
         v-if="hasSidebar"
         class="menu"
@@ -124,7 +124,7 @@ const classes = computed(() => {
   }
 }
 
-.container {
+.vp-container {
   display: flex;
   justify-content: space-between;
   align-items: center;

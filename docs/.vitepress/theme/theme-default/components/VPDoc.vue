@@ -25,7 +25,7 @@ const pageName = computed(() =>
       <div id="progress"></div>
 
       <slot name="doc-top" />
-      <div class="container">
+      <div class="doc-container">
         <div v-if="hasAside" class="aside" :class="{ 'left-aside': leftAside }">
           <div class="aside-curtain" />
           <div class="aside-container">
@@ -53,7 +53,7 @@ const pageName = computed(() =>
         <div class="content">
           <div class="content-container">
             <slot name="doc-before" />
-            <main class="main rich-text">
+            <main class="main">
               <hgroup
                 v-if="
                   !$frontmatter.hideHeadings &&
@@ -69,7 +69,7 @@ const pageName = computed(() =>
                 </p>
               </hgroup>
               <Content
-                class="vp-doc"
+                class="vp-doc rich-text"
                 :class="[
                   pageName,
                   theme.externalLinkIcon && 'external-link-icon-enabled',
@@ -108,7 +108,7 @@ const pageName = computed(() =>
     padding: 48px 32px 0;
   }
 
-  .VPDoc:not(.has-sidebar) .container {
+  .VPDoc:not(.has-sidebar) .doc-container {
     display: flex;
     justify-content: center;
     max-width: 992px;
@@ -120,7 +120,7 @@ const pageName = computed(() =>
 }
 
 @media (min-width: 1280px) {
-  .VPDoc .container {
+  .VPDoc .doc-container {
     display: flex;
     justify-content: center;
   }
@@ -135,12 +135,12 @@ const pageName = computed(() =>
     max-width: 784px;
   }
 
-  .VPDoc:not(.has-sidebar) .container {
+  .VPDoc:not(.has-sidebar) .doc-container {
     max-width: 1104px;
   }
 }
 
-.container {
+.doc-container {
   margin: 0 auto;
   width: 100%;
 }

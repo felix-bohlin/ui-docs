@@ -18,7 +18,7 @@ defineEmits<{
     aria-controls="VPNavScreen"
     @click="$emit('click')"
   >
-    <span class="container">
+    <span class="vp-container">
       <span class="top" />
       <span class="middle" />
       <span class="bottom" />
@@ -42,7 +42,7 @@ defineEmits<{
   }
 }
 
-.container {
+.vp-container {
   position: relative;
   width: 16px;
   height: 14px;

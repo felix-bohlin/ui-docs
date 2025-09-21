@@ -1,4 +1,4 @@
-import RawTheme from '@theme/index'
+import RawTheme from "@theme/index"
 import {
   createApp as createClientApp,
   createSSRApp,
@@ -6,16 +6,16 @@ import {
   h,
   onMounted,
   watchEffect,
-  type App
-} from 'vue'
-import { Content } from './components/Content'
-import { useCodeGroups } from './composables/codeGroups'
-import { useCopyCode } from './composables/copyCode'
-import { useUpdateHead } from './composables/head'
-import { usePrefetch } from './composables/preFetch'
-import { dataSymbol, initData, siteDataRef, useData } from './data'
-import { RouterSymbol, createRouter, scrollTo, type Router } from './router'
-import { inBrowser, pathToFile } from './utils'
+  type App,
+} from "vue"
+import { Content } from "./components/Content"
+import { useCodeGroups } from "./composables/codeGroups"
+import { useCopyCode } from "./composables/copyCode"
+import { useUpdateHead } from "./composables/head"
+import { usePrefetch } from "./composables/preFetch"
+import { dataSymbol, initData, siteDataRef, useData } from "./data"
+import { RouterSymbol, createRouter, scrollTo, type Router } from "./router"
+import { inBrowser, pathToFile } from "./utils"
 
 function resolveThemeExtends(theme: typeof RawTheme): typeof RawTheme {
   if (theme.extends) {
@@ -26,7 +26,7 @@ function resolveThemeExtends(theme: typeof RawTheme): typeof RawTheme {
       async enhanceApp(ctx) {
         if (base.enhanceApp) await base.enhanceApp(ctx)
         if (theme.enhanceApp) await theme.enhanceApp(ctx)
-      }
+      },
     }
   }
   return theme
@@ -35,7 +35,7 @@ function resolveThemeExtends(theme: typeof RawTheme): typeof RawTheme {
 const Theme = resolveThemeExtends(RawTheme)
 
 const VitePressApp = defineComponent({
-  name: 'VitePressApp',
+  name: "VitePressApp",
   setup() {
     const { site, lang, dir } = useData()
 
@@ -59,7 +59,7 @@ const VitePressApp = defineComponent({
 
     if (Theme.setup) Theme.setup()
     return () => h(Theme.Layout!)
-  }
+  },
 })
 
 export async function createApp() {
@@ -75,34 +75,34 @@ export async function createApp() {
   app.provide(dataSymbol, data)
 
   // install global components
-  app.component('Content', Content)
-  
+  app.component("Content", Content)
+
   // expose $frontmatter & $params
   Object.defineProperties(app.config.globalProperties, {
     $frontmatter: {
       get() {
         return data.frontmatter.value
-      }
+      },
     },
     $params: {
       get() {
         return data.page.value.params
-      }
-    }
+      },
+    },
   })
 
   if (Theme.enhanceApp) {
     await Theme.enhanceApp({
       app,
       router,
-      siteData: siteDataRef
+      siteData: siteDataRef,
     })
   }
 
   // setup devtools in dev mode
   if (import.meta.env.DEV || __VUE_PROD_DEVTOOLS__) {
-    import('./devtools.js').then(({ setupDevtools }) =>
-      setupDevtools(app, router, data)
+    import("./devtools.js").then(({ setupDevtools }) =>
+      setupDevtools(app, router, data),
     )
   }
 
@@ -132,18 +132,18 @@ function newRouter(): Router {
       // to the initial loaded path (the static vnodes already adopted the
       // static content on that load so no need to re-fetch the page)
       if (isInitialPageLoad || initialPath === pageFilePath) {
-        pageFilePath = pageFilePath.replace(/\.js$/, '.lean.js')
+        pageFilePath = pageFilePath.replace(/\.js$/, ".lean.js")
       }
 
       if (import.meta.env.DEV) {
         pageModule = import(/*@vite-ignore*/ pageFilePath).catch(() => {
           // try with/without trailing slash
           // in prod this is handled in src/client/app/utils.ts#pathToFile
-          const url = new URL(pageFilePath!, 'http://a.com')
+          const url = new URL(pageFilePath!, "http://a.com")
           const path =
-            (url.pathname.endsWith('/index.md')
-              ? url.pathname.slice(0, -9) + '.md'
-              : url.pathname.slice(0, -3) + '/index.md') +
+            (url.pathname.endsWith("/index.md")
+              ? url.pathname.slice(0, -9) + ".md"
+              : url.pathname.slice(0, -3) + "/index.md") +
             url.search +
             url.hash
           return import(/*@vite-ignore*/ path)
@@ -167,12 +167,12 @@ if (inBrowser) {
     router.go().then(() => {
       // dynamically update head tags
       useUpdateHead(router.route, data.site)
-      app.mount('#app')
+      app.mount("#app")
 
       // scroll to hash on new tab during dev
       if (import.meta.env.DEV && location.hash) {
         const target = document.getElementById(
-          decodeURIComponent(location.hash).slice(1)
+          decodeURIComponent(location.hash).slice(1),
         )
         if (target) {
           scrollTo(target, location.hash)

@@ -153,7 +153,7 @@ function renderAggregatedExamples(examplesByFile) {
        .example{display:block;padding:var(--size-3,1rem);border:1px dashed color-mix(in oklab,currentColor 30%,transparent);border-radius:12px;}
     </style>`,
   )
-  parts.push(`<main id="top" class="examples-main">`)
+  parts.push(`<div>`)
 
   // Table of contents
   const tocItems = examplesByFile.map(({ relPath, examples }) => {
@@ -201,7 +201,7 @@ function renderAggregatedExamples(examplesByFile) {
     parts.push(`</section>`)
   }
 
-  parts.push(`</main>`)
+  parts.push(`</div>`)
   return parts.join("\n")
 }
 

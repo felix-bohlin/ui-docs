@@ -19,15 +19,9 @@ import Alert from "../.vitepress/theme/app/components/Alert.vue";
 
 You can choose between:
 
-- [manual setup](#manual-setup) (more fun, recommended)
-- [npm installation](#npm-installation) (a lot less fun, recommended)
-
-This guide will set you up with:
-
-- Open Props
-- a normalize
-- some util classes
-- base theme setup
+- [Manual setup](#manual-setup) (more fun, recommended)
+- [NPM installation](#npm-installation) (a lot less fun)
+- [CDN](#cdn) (not fun either but good for quick prototyping)
 
 <div class="not-rich-text">
 
@@ -135,8 +129,15 @@ npm i opui-css -S
 
 Then check your `node_modules` folder for the `opui-css` package and pick and choose what files you want to use!
 
+#### Bundled files
+
 The `dist` folder includes bundled files with:
 
 - `dist/op.css` all the needed `Open Props` imports
 - `dist/ui.css` the entire `OPUI` library
 - `dist/op+ui.css` both files above combined
+
+
+## CDN
+
+https://cdn.jsdelivr.net/npm/opui-css/

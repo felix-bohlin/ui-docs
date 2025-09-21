@@ -22,7 +22,7 @@ const isLocked = useScrollLock(inBrowser ? document.body : null)
     @after-leave="isLocked = false"
   >
     <div v-if="open" class="VPNavScreen" ref="screen" id="VPNavScreen">
-      <div class="container">
+      <div class="vp-container">
         <slot name="nav-screen-content-before" />
         <VPNavScreenMenu class="menu" />
         <VPNavScreenTranslations class="translations" />
@@ -56,8 +56,8 @@ const isLocked = useScrollLock(inBrowser ? document.body : null)
   transition: opacity 0.25s;
 }
 
-.VPNavScreen.fade-enter-active .container,
-.VPNavScreen.fade-leave-active .container {
+.VPNavScreen.fade-enter-active .vp-container,
+.VPNavScreen.fade-leave-active .vp-container {
   transition: transform 0.25s ease;
 }
 
@@ -66,8 +66,8 @@ const isLocked = useScrollLock(inBrowser ? document.body : null)
   opacity: 0;
 }
 
-.VPNavScreen.fade-enter-from .container,
-.VPNavScreen.fade-leave-to .container {
+.VPNavScreen.fade-enter-from .vp-container,
+.VPNavScreen.fade-leave-to .vp-container {
   transform: translateY(-8px);
 }
 
@@ -77,7 +77,7 @@ const isLocked = useScrollLock(inBrowser ? document.body : null)
   }
 }
 
-.container {
+.vp-container {
   margin: 0 auto;
   padding: 24px 0 96px;
   max-width: 288px;

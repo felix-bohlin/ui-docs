@@ -1,6 +1,6 @@
 ---
-title: Components
-description: Here are all OPUI components. More components are continuously being added!
+title: Blocks
+description: Here are all OPUI blocks. More blocks are continuously being added!
 ---
 
 <script setup>
@@ -8,7 +8,7 @@ description: Here are all OPUI components. More components are continuously bein
 
   const { theme} = useData()
 
-  const components = theme.value.sidebar["/components"][1].items
+  const blocks = theme.value.sidebar["/blocks"].find((item) => item.text === "Blocks")?.items
 </script>
 
 <style scoped>
@@ -49,10 +49,10 @@ description: Here are all OPUI components. More components are continuously bein
 </style>
 
 <ul class="card-grid">
-  <li v-for="component in components">
-  <a :href="component.link" class="card outlined">
+  <li v-for="block in blocks">
+  <a :href="block.link" class="card outlined">
     <div class="content">
-      <p>{{component.text}}</p>
+      <p>{{block.text}}</p>
     </div>
   </a>
   </li>

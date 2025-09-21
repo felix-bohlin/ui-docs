@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { DefaultTheme } from 'vitepress/theme'
-import { computed } from 'vue'
-import VPTeamMembersItem from './VPTeamMembersItem.vue'
+import type { DefaultTheme } from "vitepress/theme"
+import { computed } from "vue"
+import VPTeamMembersItem from "./VPTeamMembersItem.vue"
 
 interface Props {
-  size?: 'small' | 'medium'
+  size?: "small" | "medium"
   members: DefaultTheme.TeamMember[]
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  size: 'medium'
+  size: "medium",
 })
 
 const classes = computed(() => [props.size, `count-${props.members.length}`])
@@ -17,7 +17,7 @@ const classes = computed(() => [props.size, `count-${props.members.length}`])
 
 <template>
   <div class="VPTeamMembers" :class="classes">
-    <div class="container">
+    <div class="vp-container">
       <div v-for="member in members" :key="member.name" class="item">
         <VPTeamMembersItem :size="size" :member="member" />
       </div>
@@ -26,38 +26,38 @@ const classes = computed(() => [props.size, `count-${props.members.length}`])
 </template>
 
 <style scoped>
-.VPTeamMembers.small .container {
+.VPTeamMembers.small .vp-container {
   grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
 }
 
-.VPTeamMembers.small.count-1 .container {
+.VPTeamMembers.small.count-1 .vp-container {
   max-width: 276px;
 }
-.VPTeamMembers.small.count-2 .container {
+.VPTeamMembers.small.count-2 .vp-container {
   max-width: calc(276px * 2 + 24px);
 }
-.VPTeamMembers.small.count-3 .container {
+.VPTeamMembers.small.count-3 .vp-container {
   max-width: calc(276px * 3 + 24px * 2);
 }
 
-.VPTeamMembers.medium .container {
+.VPTeamMembers.medium .vp-container {
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
 }
 
 @media (min-width: 375px) {
-  .VPTeamMembers.medium .container {
+  .VPTeamMembers.medium .vp-container {
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   }
 }
 
-.VPTeamMembers.medium.count-1 .container {
+.VPTeamMembers.medium.count-1 .vp-container {
   max-width: 368px;
 }
-.VPTeamMembers.medium.count-2 .container {
+.VPTeamMembers.medium.count-2 .vp-container {
   max-width: calc(368px * 2 + 24px);
 }
 
-.container {
+.vp-container {
   display: grid;
   gap: 24px;
   margin: 0 auto;
