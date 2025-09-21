@@ -72,7 +72,7 @@ See also: [Checkbox group](#field-group)
 
 ## Visible label
 
-Render the label text inside an element with a `.text` class.
+Render the label text inside an element with a `.label` class.
 
 <Example column centered>
 <template #example>
