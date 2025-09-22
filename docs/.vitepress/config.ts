@@ -1,5 +1,61 @@
 import { defineConfig } from "vitepress"
 
+const components = [
+  {
+    text: "Accordion",
+    link: "/components/accordion",
+  },
+  { text: "Alert", link: "/components/alert" },
+  { text: "Avatar", link: "/components/avatar" },
+  { text: "Badge", link: "/components/badge" },
+  { text: "Button", link: "/components/button" },
+  {
+    text: "Button group",
+    link: "/components/button-group",
+  },
+  { text: "Card", link: "/components/card" },
+  { text: "Checkbox", link: "/components/checkbox" },
+  { text: "Chip", link: "/components/chip" },
+  {
+    text: "Definition list",
+    link: "/components/definition-list",
+  },
+  { text: "Dialog", link: "/components/dialog" },
+  { text: "Divider", link: "/components/divider" },
+  {
+    text: "Icon Button",
+    link: "/components/icon-button",
+  },
+  { text: "List", link: "/components/list" },
+  { text: "Progress", link: "/components/progress" },
+  { text: "Radio", link: "/components/radio" },
+  { text: "Range", link: "/components/range" },
+  {
+    text: "Rich text",
+    link: "/components/rich-text",
+  },
+  { text: "Select", link: "/components/select" },
+  { text: "Snackbar", link: "/components/snackbar" },
+  { text: "Spinner", link: "/components/spinner" },
+  { text: "Switch", link: "/components/switch" },
+  {
+    text: "Tab buttons",
+    link: "/components/tab-buttons",
+  },
+  { text: "Table", link: "/components/table" },
+  // { text: "Tooltip", link: "/components/tooltip" },
+  { text: "Text field", link: "/components/text-field" },
+  { text: "Textarea", link: "/components/textarea" },
+  {
+    text: "Toggle button group",
+    link: "/components/toggle-button-group",
+  },
+  {
+    text: "Typography",
+    link: "/components/typography",
+  },
+]
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ignoreDeadLinks: true,
@@ -49,7 +105,6 @@ export default defineConfig({
       { text: "Blog", link: "/blog" },
       { text: "Open Props", link: "https://open-props.style/" },
     ],
-
     sidebar: {
       "/guide": [
         {
@@ -101,6 +156,11 @@ export default defineConfig({
               link: "/guide/acknowledgments",
             },
           ],
+        },
+        {
+          text: "Components",
+          collapsed: true,
+          items: components,
         },
       ],
       "/components": [
@@ -156,61 +216,7 @@ export default defineConfig({
         },
         {
           text: "Components",
-          items: [
-            {
-              text: "Accordion",
-              link: "/components/accordion",
-            },
-            { text: "Alert", link: "/components/alert" },
-            { text: "Avatar", link: "/components/avatar" },
-            { text: "Badge", link: "/components/badge" },
-            { text: "Button", link: "/components/button" },
-            {
-              text: "Button group",
-              link: "/components/button-group",
-            },
-            { text: "Card", link: "/components/card" },
-            { text: "Checkbox", link: "/components/checkbox" },
-            { text: "Chip", link: "/components/chip" },
-            {
-              text: "Definition list",
-              link: "/components/definition-list",
-            },
-            { text: "Dialog", link: "/components/dialog" },
-            { text: "Divider", link: "/components/divider" },
-            {
-              text: "Icon Button",
-              link: "/components/icon-button",
-            },
-            { text: "List", link: "/components/list" },
-            { text: "Progress", link: "/components/progress" },
-            { text: "Radio", link: "/components/radio" },
-            { text: "Range", link: "/components/range" },
-            {
-              text: "Rich text",
-              link: "/components/rich-text",
-            },
-            { text: "Select", link: "/components/select" },
-            { text: "Snackbar", link: "/components/snackbar" },
-            { text: "Spinner", link: "/components/spinner" },
-            { text: "Switch", link: "/components/switch" },
-            {
-              text: "Tab buttons",
-              link: "/components/tab-buttons",
-            },
-            { text: "Table", link: "/components/table" },
-            // { text: "Tooltip", link: "/components/tooltip" },
-            { text: "Text field", link: "/components/text-field" },
-            { text: "Textarea", link: "/components/textarea" },
-            {
-              text: "Toggle button group",
-              link: "/components/toggle-button-group",
-            },
-            {
-              text: "Typography",
-              link: "/components/typography",
-            },
-          ],
+          items: components,
         },
       ],
       "/blocks": [
