@@ -49,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'  # Upload the dist folder
+          path: 'docs/.vitepress/dist'
 
   # Deployment job
   deploy:
