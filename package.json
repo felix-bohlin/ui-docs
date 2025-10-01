@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
+    "docs:build:gh": "vitepress build docs --base /ui-docs/",
     "docs:preview": "vitepress preview docs",
     "html:generate": "node scripts/extract_examples.cjs && pnpm exec prettier --write index.html"
   },
