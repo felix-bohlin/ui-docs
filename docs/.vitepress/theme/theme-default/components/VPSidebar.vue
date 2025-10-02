@@ -39,7 +39,7 @@ watch(
 // Set theme with localStorage persistence
 const selectedTheme = useLocalStorage(
   "vitepress-theme-preference",
-  "prefers-theme-one",
+  "prefers-theme-two",
 )
 
 function applyThemeClass(theme: string) {
