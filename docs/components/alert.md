@@ -200,8 +200,10 @@ There are four different severities - default, ok, warning, error.
 
 ## Installation
 
+<div class="theme-one">
+
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/alert.css [alert.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/alert.css [alert.css]
 
 ```css [theme.css]
 /* ... */
@@ -224,3 +226,33 @@ There are four different severities - default, ok, warning, error.
 ```
 
 :::
+
+</div>
+<div class="theme-two">
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/components/alert.css [alert.css]
+
+```css [theme.css]
+/* ... */
+.error {
+  --palette-hue: var(--oklch-red, 25);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+.ok {
+  --palette-hue: var(--oklch-indigo, 310);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+.warning {
+  --palette-hue: var(--oklch-warning, 75);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+/* ... */
+```
+
+:::
+
+</div>

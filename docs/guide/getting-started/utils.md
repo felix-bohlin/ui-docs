@@ -5,5 +5,5 @@ description: Reused or optional utility-classes found here and there in the libr
 ---
 
 ::: code-group [utils.css]
-<<< @/../node_modules/opui-css/src/core/utils.css [core/utils.css]
+<<< @/../node_modules/opui-css/src/core/utils.css [src/core/utils.css]
 :::

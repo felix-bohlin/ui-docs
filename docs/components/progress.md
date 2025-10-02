@@ -88,5 +88,5 @@ Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/progress.css [progress.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/progress.css [progress.css]
 :::

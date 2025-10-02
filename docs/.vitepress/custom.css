@@ -128,3 +128,21 @@ TODO: Make sure it doesn't show if there's nothing to scroll
     inline-size: 25ch;
   }
 }
+
+.prefers-theme-one {
+  .theme-one {
+    display: block;
+  }
+  .theme-two {
+    display: none;
+  }
+}
+
+.prefers-theme-two {
+  .theme-one {
+    display: none;
+  }
+  .theme-two {
+    display: block;
+  }
+}

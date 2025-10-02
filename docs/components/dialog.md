@@ -187,6 +187,6 @@ A `<dialog>` element on its own doesn't do much. It's recommended to use it in c
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/dialog.css [dialog.css]
-<<< @/../node_modules/opui-css/src/components/card.css [card.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/dialog.css [dialog.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/card.css [card.css]
 :::
