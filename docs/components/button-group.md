@@ -249,6 +249,17 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 
 ## Installation
 
+<div class="theme-one">
+
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/button-group.css [button-group.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/button-group.css [button-group.css]
 :::
+
+</div>
+<div class="theme-two">
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/components/button-group.css [button-group.css]
+:::
+
+</div>

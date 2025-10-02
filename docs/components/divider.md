@@ -28,4 +28,4 @@ It's just an `<hr>`.
 
 ## Installation
 
-<<< @/../node_modules/opui-css/src/components/divider.css
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/divider.css

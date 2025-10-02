@@ -54,5 +54,5 @@ title: Range
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/range.css [range.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/range.css [range.css]
 :::

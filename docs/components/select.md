@@ -527,7 +527,7 @@ This way of writing Selects are currently quite experimental. Accessible solutio
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/field.css [field.css]
-<<< @/../node_modules/opui-css/src/components/select.css [select.css]
-<<< @/../node_modules/opui-css/src/components/list.css [list.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/field.css [field.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/select.css [select.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/list.css [list.css]
 :::

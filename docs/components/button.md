@@ -349,5 +349,5 @@ These are the classes and attributes a button can be styled with. As usual, feel
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/button.css [button.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/button.css [button.css]
 :::

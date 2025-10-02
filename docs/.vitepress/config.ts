@@ -116,30 +116,24 @@ export default defineConfig({
               link: "/guide/getting-started",
               items: [
                 {
-                  text: "Main",
-                  link: "/guide/getting-started/main",
+                  text: "Theme",
+                  link: "/guide/getting-started/theme",
                 },
                 {
-                  text: "OPUI",
-                  link: "/guide/getting-started/opui",
-                  items: [
-                    {
-                      text: "Normalize",
-                      link: "/guide/getting-started/normalize",
-                    },
-                    {
-                      text: "Utils",
-                      link: "/guide/getting-started/utils",
-                    },
-                    {
-                      text: "Theme",
-                      link: "/guide/getting-started/theme",
-                    },
-                    {
-                      text: "Components",
-                      link: "/guide/getting-started/components",
-                    },
-                  ],
+                  text: "Setup",
+                  link: "/guide/getting-started/setup",
+                },
+                {
+                  text: "Components",
+                  link: "/guide/getting-started/components",
+                },
+                {
+                  text: "Normalize",
+                  link: "/guide/getting-started/normalize",
+                },
+                {
+                  text: "Utils",
+                  link: "/guide/getting-started/utils",
                 },
               ],
             },
