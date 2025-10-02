@@ -220,7 +220,7 @@ If it's going to be this hard I'll just bypass all that nonsense and do somethin
 
 I ended up reaching for the trusty `:after` pseudo-element. In this case it also enables me to do some nice animations, so win-win!
 
-<Example>
+<Example theme="theme-one">
 <template #example>
 <progress></progress>
 </template>
@@ -228,7 +228,26 @@ I ended up reaching for the trusty `:after` pseudo-element. In this case it also
 <template #code>
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/progress.css [progress.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/progress.css [progress.css]
+
+```html [progress.html]
+<progress></progress>
+```
+
+:::
+
+</template>
+</Example>
+
+<Example theme="theme-two">
+<template #example>
+<progress></progress>
+</template>
+
+<template #code>
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/components/progress.css [progress.css]
 
 ```html [progress.html]
 <progress></progress>

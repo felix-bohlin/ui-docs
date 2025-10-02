@@ -10,11 +10,13 @@ const props = withDefaults(
     hideCode?: boolean
     richText?: "rich-text" | "not-rich-text"
     row?: boolean
+    theme?: "theme-all" | "theme-one" | "theme-two"
     wrapperClass?: string
   }>(),
   {
     hideCode: undefined,
     richText: "not-rich-text",
+    theme: "theme-all",
   },
 )
 
@@ -29,6 +31,7 @@ const showCode = ref(!props?.hideCode)
       wrapperClass,
       centered ? 'example-centered' : '',
       richText ?? 'not-rich-text',
+      theme,
     ]"
   >
     <div v-if="$slots.controls" class="controls">
@@ -82,6 +85,13 @@ const showCode = ref(!props?.hideCode)
       opacity: 0.075;
     }
   }
+}
+
+.prefers-theme-one .example-wrapper.theme-one {
+  display: grid;
+}
+.prefers-theme-two .example-wrapper.theme-two {
+  display: grid;
 }
 
 .example-wrapper {
