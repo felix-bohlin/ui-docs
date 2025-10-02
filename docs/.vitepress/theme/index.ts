@@ -15,33 +15,40 @@ export default {
       function applyTheme(theme: string) {
         const isThemeTwo = theme === "prefers-theme-two"
 
-        // Find and disable/enable the appropriate theme styles
-        document.querySelectorAll("style").forEach((style) => {
-          const content = style.textContent || ""
+        // Find and disable/enable the appropriate theme styles using markers
+        document
+          .querySelectorAll("style, link[rel='stylesheet']")
+          .forEach((element) => {
+            const content = element.textContent || ""
+            const href = element.getAttribute?.("href") || ""
 
-          // Check if this is a theme-one style
-          if (
-            content.includes("--palette-hue: var(--oklch-teal)") ||
-            content.includes("--palette-hue-rotate-by: 5")
-          ) {
-            style.disabled = isThemeTwo // Disable theme-one if theme-two is active
-          }
+            // Check if this is a theme-one style
+            if (
+              content.includes("THEME_ONE_MARKER") ||
+              href.includes("theme-one")
+            ) {
+              ;(element as HTMLStyleElement | HTMLLinkElement).disabled =
+                isThemeTwo
+            }
 
-          // Check if this is a theme-two style
-          if (
-            content.includes("--palette-hue: var(--oklch-orange)") ||
-            content.includes("--palette-hue-rotate-by: 0")
-          ) {
-            style.disabled = !isThemeTwo // Disable theme-two if theme-one is active
-          }
-        })
+            // Check if this is a theme-two style
+            if (
+              content.includes("THEME_TWO_MARKER") ||
+              href.includes("theme-two")
+            ) {
+              ;(element as HTMLStyleElement | HTMLLinkElement).disabled =
+                !isThemeTwo
+            }
+          })
       }
 
       // Apply initial theme
       const savedTheme =
         localStorage.getItem("vitepress-theme-preference") ||
         "prefers-theme-one"
-      applyTheme(savedTheme)
+
+      // Use a slight delay to ensure styles are loaded
+      setTimeout(() => applyTheme(savedTheme), 0)
 
       // When theme changes, apply it
       const originalSetItem = localStorage.setItem.bind(localStorage)
