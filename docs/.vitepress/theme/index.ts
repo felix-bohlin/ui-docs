@@ -1,8 +1,9 @@
 import DefaultTheme from "./theme-default/without-fonts"
 import type { Theme } from "vitepress"
 
-// Import default theme
+// Import both themes - we'll control which one is active
 import "./theme-one.css"
+import "./theme-two.css"
 
 import "../../../node_modules/opui-blocks/dist/ui-blocks.css"
 
@@ -10,58 +11,53 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ app, router, siteData }) {
     if (typeof window !== "undefined") {
-      // Check if we need to load theme-two instead
-      const savedTheme = localStorage.getItem("vitepress-theme-preference")
+      // Function to show only the active theme
+      function applyTheme(theme: string) {
+        const isThemeTwo = theme === "prefers-theme-two"
 
-      if (savedTheme === "prefers-theme-two") {
-        // Dynamically load theme-two and remove theme-one
-        import("./theme-two.css").then(() => {
-          // More aggressive removal of theme-one styles
-          document.querySelectorAll("style").forEach((style) => {
-            const content = style.textContent || ""
-            if (
-              content.includes("theme-one") ||
-              content.includes("--palette-hue: var(--oklch-teal)") ||
-              content.includes("--palette-hue-rotate-by: 5")
-            ) {
-              style.remove()
-            }
-          })
+        // Find and disable/enable the appropriate theme styles
+        document.querySelectorAll("style").forEach((style) => {
+          const content = style.textContent || ""
 
-          // Also remove link elements if any
-          document
-            .querySelectorAll('link[rel="stylesheet"]')
-            .forEach((link) => {
-              const href = link.getAttribute("href") || ""
-              if (href.includes("theme-one")) {
-                link.remove()
-              }
-            })
+          // Check if this is a theme-one style
+          if (
+            content.includes("--palette-hue: var(--oklch-teal)") ||
+            content.includes("--palette-hue-rotate-by: 5")
+          ) {
+            style.disabled = isThemeTwo // Disable theme-one if theme-two is active
+          }
 
-          // Load custom.css last after theme-two
-          import("../custom.css")
+          // Check if this is a theme-two style
+          if (
+            content.includes("--palette-hue: var(--oklch-orange)") ||
+            content.includes("--palette-hue-rotate-by: 0")
+          ) {
+            style.disabled = !isThemeTwo // Disable theme-two if theme-one is active
+          }
         })
-      } else {
-        // Load custom.css last after theme-one
-        import("../custom.css")
       }
 
-      // When theme changes, reload the page for clean swap
+      // Apply initial theme
+      const savedTheme =
+        localStorage.getItem("vitepress-theme-preference") ||
+        "prefers-theme-one"
+      applyTheme(savedTheme)
+
+      // When theme changes, apply it
       const originalSetItem = localStorage.setItem.bind(localStorage)
       localStorage.setItem = function (key: string, value: string) {
-        const oldValue = localStorage.getItem(key)
         originalSetItem(key, value)
 
-        // If theme preference changed, reload to apply new theme
-        if (key === "vitepress-theme-preference" && oldValue !== value) {
-          window.location.reload()
+        // If theme preference changed, apply new theme
+        if (key === "vitepress-theme-preference") {
+          applyTheme(value)
         }
       }
 
       // Watch for localStorage changes from other tabs
       window.addEventListener("storage", (e) => {
         if (e.key === "vitepress-theme-preference" && e.newValue) {
-          window.location.reload()
+          applyTheme(e.newValue)
         }
       })
     }
