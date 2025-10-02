@@ -54,8 +54,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       opui-css:
-        specifier: ^2.2.3
-        version: 2.2.3
+        specifier: ^2.3.0
+        version: 2.3.0
       shiki:
         specifier: ^3.10.0
         version: 3.10.0
@@ -994,8 +994,8 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
-  detect-libc@2.1.0:
-    resolution: {integrity: sha512-vEtk+OcP7VBRtQZ1EJ3bdgzSfBjgnEalLTp5zjJrS+2Z1w2KZly4SBdac/WDU3hhsNAZ9E8SC96ME4Ey8MZ7cg==}
+  detect-libc@2.1.1:
+    resolution: {integrity: sha512-ecqj/sy1jcK1uWrwpR67UhYrIFQ+5WlGxth34WquCbamhFA6hkkwiu37o6J5xCHdo1oixJRfVRw+ywV+Hq/0Aw==}
     engines: {node: '>=8'}
 
   devlop@1.1.0:
@@ -1206,8 +1206,8 @@ packages:
   opui-blocks@0.2.0:
     resolution: {integrity: sha512-WO0aN08a0eLy+oGhZTlWhGsk4RU7ktP1d/5SVpccfsuXHCiwE1OiBlPBRiK0Y7B59rTB0Q3lT4U+gRIeF7QPmg==}
 
-  opui-css@2.2.3:
-    resolution: {integrity: sha512-yQItDeq6fO+knCTw9OWqYr9NSCyAhwxfVj/9hMs8WWOAu8cqowjAx4OpEbECbdMFagk3OTORUWsYMy7C7i8AbQ==}
+  opui-css@2.3.0:
+    resolution: {integrity: sha512-Reyzg12uzZlwd7Pj0GkV+9APU/a5vm4ccSbz72BQHEj/+dVbm4klunWHyrVaYDAIl49XS1Be8g7VTAY04+Vy+A==}
 
   path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
@@ -2204,7 +2204,7 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  detect-libc@2.1.0:
+  detect-libc@2.1.1:
     optional: true
 
   devlop@1.1.0:
@@ -2363,7 +2363,7 @@ snapshots:
 
   lightningcss@1.30.1:
     dependencies:
-      detect-libc: 2.1.0
+      detect-libc: 2.1.1
     optionalDependencies:
       lightningcss-darwin-arm64: 1.30.1
       lightningcss-darwin-x64: 1.30.1
@@ -2452,9 +2452,9 @@ snapshots:
 
   opui-blocks@0.2.0:
     dependencies:
-      opui-css: 2.2.3
+      opui-css: 2.3.0
 
-  opui-css@2.2.3: {}
+  opui-css@2.3.0: {}
 
   path-browserify@1.0.1: {}
 
