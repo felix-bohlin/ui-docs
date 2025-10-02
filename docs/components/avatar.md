@@ -188,6 +188,17 @@ To get the Avatars to stack like they do below (previous item on top of the next
 
 ## Installation
 
+<div class="theme-one">
+
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/avatar.css [avatar.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/avatar.css [avatar.css]
 :::
+
+</div>
+<div class="theme-two">
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/components/avatar.css [avatar.css]
+:::
+
+</div>

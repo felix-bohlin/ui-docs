@@ -460,7 +460,20 @@ Accordion has [card](/components/card) as a dependency.
 
 </div>
 
+<div class="theme-one">
+
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/accordion.css [accordion.css]
-<<< @/../node_modules/opui-css/src/components/card.css [card.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/accordion.css [accordion.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/card.css [card.css]
 :::
+
+</div>
+
+<div class="theme-two">
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/components/accordion.css [accordion.css]
+<<< @/../node_modules/opui-css/src/themes/theme-two/components/card.css [card.css]
+:::
+
+</div>

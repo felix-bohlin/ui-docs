@@ -116,5 +116,5 @@ See [progress accessibility](/components/progress#accessibility) section for mor
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/spinner.css [spinner.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/spinner.css [spinner.css]
 :::

@@ -912,5 +912,5 @@ Simply add the `.dense` class to the `ul` element.
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/list.css [list.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/list.css [list.css]
 :::

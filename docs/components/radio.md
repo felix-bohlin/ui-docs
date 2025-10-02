@@ -505,6 +505,6 @@ Accessible radio buttons must have a label. You can choose between three approac
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/checkbox-radio.css [checkbox-radio.css]
-<<< @/../node_modules/opui-css/src/components/field-group.css [field-group.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/checkbox-radio.css [checkbox-radio.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/field-group.css [field-group.css]
 :::
