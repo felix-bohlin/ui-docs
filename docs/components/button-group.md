@@ -59,12 +59,6 @@ Groups related buttons by wrapping them with `<yourElement class="button-group" 
   <button class="button filled">Filled</button>
 </div>
 
-<div role="group" class="button-group">
-  <button class="button elevated">Elevated</button>
-  <button class="button elevated">Elevated</button>
-  <button class="button elevated">Elevated</button>
-</div>
-
 </template>
 
 <template #code>
