@@ -518,6 +518,6 @@ No. But you get some accessibility wins for free with `<label>`. It's recommende
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/field.css [field.css]
-<<< @/../node_modules/opui-css/src/components/text-field.css [text-field.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/field.css [field.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/text-field.css [text-field.css]
 :::

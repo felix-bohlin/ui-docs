@@ -1,9 +1,20 @@
 ---
 overline: Guide
 title: Theme
-description: A default theme file is provided with OPUI, but it's recommended you tweak it and make it your own (as with everything else to be honest).
+description: The entry point for all CSS imports. This is where everything starts.
 ---
 
+<div class="theme-one">
+
 ::: code-group [theme.css]
-<<< @/../node_modules/opui-css/src/theme.css [theme.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/theme.css [src/theme-one/theme.css]
 :::
+
+</div>
+<div class="theme-two">
+
+::: code-group [theme.css]
+<<< @/../node_modules/opui-css/src/themes/theme-two/theme.css [src/theme-two/theme.css]
+:::
+
+</div>
