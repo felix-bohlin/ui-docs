@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { useScrollLock, useLocalStorage } from "@vueuse/core"
+import { useScrollLock } from "@vueuse/core"
 import { inBrowser } from "vitepress"
 import { ref, watch } from "vue"
 import { useSidebar } from "../composables/sidebar"
+import { useThemePreference } from "../composables/theme"
 import VPSidebarGroup from "./VPSidebarGroup.vue"
 
 const { sidebarGroups, hasSidebar } = useSidebar()
@@ -36,27 +37,7 @@ watch(
   { deep: true },
 )
 
-// Set theme with localStorage persistence
-const selectedTheme = useLocalStorage(
-  "vitepress-theme-preference",
-  "prefers-theme-two",
-)
-
-function applyThemeClass(theme: string) {
-  if (!inBrowser) return
-
-  const html = document.documentElement
-  html.classList.remove("prefers-theme-one", "prefers-theme-two")
-  html.classList.add(theme)
-}
-
-watch(
-  selectedTheme,
-  (newTheme) => {
-    applyThemeClass(newTheme)
-  },
-  { immediate: true },
-)
+const { selectedTheme, options: themeOptions } = useThemePreference()
 </script>
 
 <template>
@@ -121,11 +102,31 @@ watch(
   overscroll-behavior: contain;
 
   .field {
-    margin-block: var(--size-3);
     inline-size: 100%;
+    margin-block: var(--size-3);
+  }
+}
 
-    select button {
-      padding-block: var(--size-2);
+.prefers-theme-one .VPSidebar {
+  .field {
+    select {
+      button {
+        padding-block: var(--size-2);
+      }
+    }
+  }
+}
+
+.prefers-theme-one .VPSidebar {
+  .field {
+    background-color: inherit;
+
+    .label {
+      background-color: inherit;
+    }
+
+    select {
+      background-color: inherit;
     }
   }
 }
