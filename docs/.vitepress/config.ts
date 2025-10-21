@@ -116,12 +116,12 @@ export default defineConfig({
               link: "/guide/getting-started",
               items: [
                 {
-                  text: "Theme",
-                  link: "/guide/getting-started/theme",
+                  text: "Imports",
+                  link: "/guide/getting-started/imports",
                 },
                 {
-                  text: "Setup",
-                  link: "/guide/getting-started/setup",
+                  text: "Theme",
+                  link: "/guide/getting-started/theme",
                 },
                 {
                   text: "Components",

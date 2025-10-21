@@ -61,7 +61,6 @@ This is a nice, recommended folder structure. Feel free to change it to your nee
   └─ [theme folder name]
     └─ theme.css
     └─ open-props.css
-    └─ setup.css
     └─ components
        └─ button.css
        └─ ...
@@ -71,9 +70,9 @@ This is a nice, recommended folder structure. Feel free to change it to your nee
 
 <ul class="definition-list dotted">
   <li>
-    <span class="term"><code>theme.css</code></span>
+    <span class="term"><code>imports.css</code></span>
     <hr>
-    <span class="description">is the home of all your CSS</span>
+    <span class="description">imports all your CSS</span>
   </li>
   <li>
     <span class="term"><code>open-props.css</code></span>
@@ -81,9 +80,9 @@ This is a nice, recommended folder structure. Feel free to change it to your nee
     <span class="description">consists of Open Props imports, only</span>
   </li>
   <li>
-   <span class="term"><code>setup.css</code></span>
+   <span class="term"><code>theme.css</code></span>
    <hr>
-   <span class="description">setup for your theme - variables and other global... setup
+   <span class="description">OPUI theme setup
 </span>
   </li>
 </ul>
@@ -93,9 +92,9 @@ This is a nice, recommended folder structure. Feel free to change it to your nee
 <div class="theme-one">
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/themes/theme-one/theme.css [theme.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/imports.css [imports.css]
 <<< @/../node_modules/opui-css/src/open-props.css [open-props.css]
-<<< @/../node_modules/opui-css/src/themes/theme-one/setup.css [setup.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/theme.css [theme.css]
 
 :::
 
@@ -103,9 +102,9 @@ This is a nice, recommended folder structure. Feel free to change it to your nee
 <div class="theme-two">
 
 ::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/imports.css [imports.css]
 <<< @/../node_modules/opui-css/src/themes/theme-two/theme.css [theme.css]
 <<< @/../node_modules/opui-css/src/open-props.css [open-props.css]
-<<< @/../node_modules/opui-css/src/themes/theme-two/setup.css [setup.css]
 
 :::
 
