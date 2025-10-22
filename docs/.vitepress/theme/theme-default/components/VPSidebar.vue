@@ -36,8 +36,6 @@ watch(
   },
   { deep: true },
 )
-
-const { selectedTheme, options: themeOptions } = useThemePreference()
 </script>
 
 <template>
@@ -49,24 +47,6 @@ const { selectedTheme, options: themeOptions } = useThemePreference()
     @click.stop
   >
     <div class="curtain" />
-
-    <label class="field small">
-      <span class="label">Theme</span>
-      <select v-model="selectedTheme">
-        <button>
-          <selectedcontent></selectedcontent>
-        </button>
-        <div class="list">
-          <option
-            v-for="option in themeOptions"
-            :key="option.value"
-            :value="option.value"
-          >
-            {{ option.label }}
-          </option>
-        </div>
-      </select>
-    </label>
 
     <nav
       class="nav"
