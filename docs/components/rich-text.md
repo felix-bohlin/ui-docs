@@ -269,5 +269,5 @@ What I've written here is probably long enough, but adding this final sentence c
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/rich-text.css [rich-text.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/rich-text.css [rich-text.css]
 :::

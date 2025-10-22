@@ -26,7 +26,6 @@ import Example from "../.vitepress/theme/app/components/Example.vue"
     <button class="button outlined">Outlined</button>
     <button class="button tonal">Tonal</button>
     <button class="button filled">Filled</button>
-    <button class="button elevated">Elevated</button>
 </template>
 
 <template #code>
@@ -36,7 +35,6 @@ import Example from "../.vitepress/theme/app/components/Example.vue"
 <button class="button outlined">Outlined</button>
 <button class="button tonal">Tonal</button>
 <button class="button filled">Filled</button>
-<button class="button elevated">Elevated</button>
 ```
 
 </template>
@@ -122,26 +120,6 @@ import Example from "../.vitepress/theme/app/components/Example.vue"
 </template>
 </Example>
 
-### Elevated
-
-<Example row>
-<template #example>
-    <button class="button elevated">Elevated</button>
-    <button class="button elevated" disabled>Disabled</button>
-    <a href="#elevated" class="button elevated">Link</a>
-</template>
-
-<template #code>
-
-```html
-<button class="button elevated">Elevated</button>
-<button class="button elevated" disabled>Disabled</button>
-<a href="#" class="button elevated">Link</a>
-```
-
-</template>
-</Example>
-
 ## Buttons with icon and label
 
 <Example column>
@@ -163,11 +141,7 @@ import Example from "../.vitepress/theme/app/components/Example.vue"
     Filled
      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
     </button>
-    <button class="button elevated">
-    Elevated
-     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
-    </button>
-  </div>
+   </div>
 
    <div class="example-row">
     <button class="button">
@@ -185,10 +159,6 @@ import Example from "../.vitepress/theme/app/components/Example.vue"
     <button class="button filled">
      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
     Filled
-    </button>
-    <button class="button elevated">
-     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
-    Elevated
     </button>
   </div>
 </template>
@@ -272,14 +242,12 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
   <button class="button outlined" disabled>Outlined</button>
   <button class="button tonal" disabled>Tonal</button>
   <button class="button filled" disabled>Filled</button>
-  <button class="button elevated" disabled>Elevated</button>
 </div>
 <div class="example-row">
   <button class="button" disabled>Text <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button outlined" disabled>Outlined <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button tonal" disabled>Tonal <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button filled" disabled>Filled <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
-  <button class="button elevated" disabled>Elevated <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
 </div>
 </template>
 
@@ -296,6 +264,8 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
 
 </template>
 </Example>
+
+<div class="theme-one">
 
 ## Ripple effect
 
@@ -340,6 +310,8 @@ Either disable it by setting the ripple size to 0 in your theme config:
 
 :::
 
+</div>
+
 ## Colors
 
 These are the out-of-the-box colors generated by the Open Props UI `theme.css` file. You are free to add as many and as few as you want to your styles.
@@ -377,5 +349,5 @@ These are the classes and attributes a button can be styled with. As usual, feel
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/button.css [button.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/button.css [button.css]
 :::

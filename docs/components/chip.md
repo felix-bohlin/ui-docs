@@ -300,5 +300,5 @@ Make sure the text is wrapped in a `.text` wrapper.
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/chip.css [chip.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/chip.css [chip.css]
 :::

@@ -26,8 +26,11 @@ You can choose between:
 <div class="not-rich-text">
 
 <Alert class="ok outlined">
+
 <p>Open Props UI is <u><strong>just CSS</strong></u>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
+
 </Alert>
+
 </div>
 
 ## Manual setup
@@ -48,35 +51,28 @@ npm i opbeta@npm:open-props@2.0.0-beta.5 -S
 
 The setup process will differ a bit if you use a framework, but the core principles still apply. You should have no problems getting it to work though :+1: Otherwise, [let me know](https://github.com/felix-bohlin/ui).
 
-This is the folder structure that comes out of the box. Feel free to change it to your needs.
+This is a nice, recommended folder structure. Feel free to change it to your needs.
 
 ```
-├─ main.css
-├─ opui.css
-├─ open-props.css
-├─ theme.css
-├─ core
-│  └─ normalize.css
-│  └─ utils.css
-│  └─ components.css
-├─ components
-│  └─ button.css
-│  └─ ...
-
+├─ src
+  └─ core
+  │  └─ normalize.css
+  │  └─ utils.css
+  └─ [theme folder name]
+    └─ theme.css
+    └─ open-props.css
+    └─ components
+       └─ button.css
+       └─ ...
 ```
 
 <div class="not-rich-text">
 
 <ul class="definition-list dotted">
   <li>
-    <span class="term"><code>main.css</code></span>
+    <span class="term"><code>imports.css</code></span>
     <hr>
-    <span class="description">is the home of all your CSS</span>
-  </li>
-  <li>
-    <span class="term"><code>opui.css</code></span>
-    <hr>
-    <span class="description">consists of OPUI imports, only</span>
+    <span class="description">imports all your CSS</span>
   </li>
   <li>
     <span class="term"><code>open-props.css</code></span>
@@ -86,30 +82,44 @@ This is the folder structure that comes out of the box. Feel free to change it t
   <li>
    <span class="term"><code>theme.css</code></span>
    <hr>
-   <span class="description">the default theme provided with OPUI
+   <span class="description">OPUI theme setup
 </span>
   </li>
 </ul>
 
-::: code-group [main.css]
-<<< @/../node_modules/opui-css/src/main.css [main.css]
-<<< @/../node_modules/opui-css/src/opui.css [opui.css]
+</div>
+
+<div class="theme-one">
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-one/imports.css [imports.css]
 <<< @/../node_modules/opui-css/src/open-props.css [open-props.css]
-<<< @/../node_modules/opui-css/src/theme.css [theme.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/theme.css [theme.css]
 
 :::
 
+</div>
+<div class="theme-two">
+
+::: code-group
+<<< @/../node_modules/opui-css/src/themes/theme-two/imports.css [imports.css]
+<<< @/../node_modules/opui-css/src/themes/theme-two/theme.css [theme.css]
+<<< @/../node_modules/opui-css/src/open-props.css [open-props.css]
+
+:::
+
+</div>
+
 <Accordion variant="tonal" style="margin-block-start: var(--size-3)">
+
 <template #summary>src/core</template>
 
 ::: code-group
 <<< @/../node_modules/opui-css/src/core/normalize.css [normalize.css]
 <<< @/../node_modules/opui-css/src/core/utils.css [utils.css]
-<<< @/../node_modules/opui-css/src/core/components.css [components.css]
 :::
 
 </Accordion>
-</div>
 
 ### 3. Copy & paste
 
@@ -134,9 +144,10 @@ Then check your `node_modules` folder for the `opui-css` package and pick and ch
 The `dist` folder includes bundled files with:
 
 - `dist/op.css` all the needed `Open Props` imports
-- `dist/ui.css` the entire `OPUI` library
-- `dist/op+ui.css` both files above combined
-
+- `dist/theme-one.css` all `OPUI` components
+- `dist/theme-one+op.css` all `OPUI` components + all needed `Open Props` imports
+- `dist/theme-two.css` all `OPUI` components
+- `dist/theme-two+op.css` all `OPUI` components + all needed `Open Props` imports
 
 ## CDN
 

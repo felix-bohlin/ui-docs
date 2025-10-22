@@ -145,5 +145,5 @@ Other components might depend on the card component. Be mindful when making chan
 </div>
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/card.css [card.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/card.css [card.css]
 :::

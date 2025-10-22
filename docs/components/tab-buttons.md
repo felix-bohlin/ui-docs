@@ -49,18 +49,37 @@ title: Tab buttons
 ```html
 <nav class="tabs underlined">
   <div role="tablist" aria-label="Underlined tabs">
-    <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
+    <button
+      id="underlined-tab-1"
+      role="tab"
+      aria-controls="tabpanel-1"
+      aria-selected="true"
+      tabindex="0"
+    >
       Profile
     </button>
-    <button id="underlined-tab-2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
+    <button
+      id="underlined-tab-2"
+      role="tab"
+      aria-controls="tabpanel-2"
+      aria-selected="false"
+      tabindex="-1"
+    >
       Settings
     </button>
-    <button id="underlined-tab-3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
+    <button
+      id="underlined-tab-3"
+      role="tab"
+      aria-controls="tabpanel-3"
+      aria-selected="false"
+      tabindex="-1"
+    >
       Notifications
     </button>
   </div>
 </nav>
 ```
+
 </template>
 </Example>
 
@@ -135,6 +154,7 @@ title: Tab buttons
   </div>
 </nav>
 ```
+
 </template>
 </Example>
 
@@ -172,5 +192,5 @@ There's a lot more. Read about it [here](https://www.w3.org/WAI/ARIA/apg/pattern
 ## Installation
 
 ::: code-group
-<<< @/../node_modules/opui-css/src/components/tab-buttons.css [tab-buttons.css]
+<<< @/../node_modules/opui-css/src/themes/theme-one/components/tab-buttons.css [tab-buttons.css]
 :::

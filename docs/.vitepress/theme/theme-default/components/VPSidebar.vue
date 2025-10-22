@@ -3,6 +3,7 @@ import { useScrollLock } from "@vueuse/core"
 import { inBrowser } from "vitepress"
 import { ref, watch } from "vue"
 import { useSidebar } from "../composables/sidebar"
+import { useThemePreference } from "../composables/theme"
 import VPSidebarGroup from "./VPSidebarGroup.vue"
 
 const { sidebarGroups, hasSidebar } = useSidebar()
@@ -35,6 +36,8 @@ watch(
   },
   { deep: true },
 )
+
+const { selectedTheme, options: themeOptions } = useThemePreference()
 </script>
 
 <template>
@@ -46,6 +49,19 @@ watch(
     @click.stop
   >
     <div class="curtain" />
+
+    <label class="field small">
+      <span class="label">Theme</span>
+      <select v-model="selectedTheme">
+        <button>
+          <selectedcontent></selectedcontent>
+        </button>
+        <div class="list">
+          <option value="prefers-theme-one">Theme One</option>
+          <option value="prefers-theme-two">Theme Two</option>
+        </div>
+      </select>
+    </label>
 
     <nav
       class="nav"
@@ -84,6 +100,35 @@ watch(
     opacity 0.5s,
     transform 0.25s ease;
   overscroll-behavior: contain;
+
+  .field {
+    inline-size: 100%;
+    margin-block: var(--size-3);
+  }
+}
+
+.prefers-theme-one .VPSidebar {
+  .field {
+    select {
+      button {
+        padding-block: var(--size-2);
+      }
+    }
+  }
+}
+
+.prefers-theme-one .VPSidebar {
+  .field {
+    background-color: inherit;
+
+    .label {
+      background-color: inherit;
+    }
+
+    select {
+      background-color: inherit;
+    }
+  }
 }
 
 .VPSidebar.open {
