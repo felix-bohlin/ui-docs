@@ -8,9 +8,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "node scripts/build_themes.cjs && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "html:generate": "node scripts/extract_examples.cjs && pnpm exec prettier --write index.html"
+    "html:generate": "node scripts/extract_examples.cjs && pnpm exec prettier --write index.html",
+    "css:bundle": "node scripts/build_themes.cjs"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
