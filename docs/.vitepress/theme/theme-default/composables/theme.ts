@@ -1,6 +1,9 @@
 import { computed, watch } from "vue"
 import { useLocalStorage } from "@vueuse/core"
+import { withBase } from "vitepress"
 import { inBrowser } from "../../shared/shared"
+import themeOneHref from "../../theme-one.css?url"
+import themeTwoHref from "../../theme-two.css?url"
 
 export const THEME_STORAGE_KEY = "vitepress-theme-preference"
 const DEFAULT_THEME = "prefers-theme-two"
@@ -14,8 +17,8 @@ type ThemeOption = (typeof themeDefinitions)[number]
 export type ThemeValue = ThemeOption["value"]
 
 const themeHrefMap: Record<ThemeValue, string> = {
-  "prefers-theme-one": new URL("../../theme-one.css", import.meta.url).href,
-  "prefers-theme-two": new URL("../../theme-two.css", import.meta.url).href,
+  "prefers-theme-one": withBase(themeOneHref),
+  "prefers-theme-two": withBase(themeTwoHref),
 }
 
 let initialized = false
@@ -90,9 +93,9 @@ export function registerThemeStorageListener() {
     if (event.key !== THEME_STORAGE_KEY) return
 
     const value = event.newValue
-    if (!isThemeValue(value)) return
+    const theme = isThemeValue(value) ? value : DEFAULT_THEME
 
-    applyTheme(value)
+    applyTheme(theme)
   })
 
   storageListenerAttached = true

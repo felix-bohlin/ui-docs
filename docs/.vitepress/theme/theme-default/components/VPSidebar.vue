@@ -53,13 +53,13 @@ const { selectedTheme, options: themeOptions } = useThemePreference()
     <label class="field small">
       <span class="label">Theme</span>
       <select v-model="selectedTheme">
-        <button>
-          <selectedcontent></selectedcontent>
-        </button>
-        <div class="list">
-          <option value="prefers-theme-one">Theme One</option>
-          <option value="prefers-theme-two">Theme Two</option>
-        </div>
+        <option
+          v-for="option in themeOptions"
+          :key="option.value"
+          :value="option.value"
+        >
+          {{ option.label }}
+        </option>
       </select>
     </label>
 
@@ -104,29 +104,15 @@ const { selectedTheme, options: themeOptions } = useThemePreference()
   .field {
     inline-size: 100%;
     margin-block: var(--size-3);
-  }
-}
-
-.prefers-theme-one .VPSidebar {
-  .field {
-    select {
-      button {
-        padding-block: var(--size-2);
-      }
-    }
-  }
-}
-
-.prefers-theme-one .VPSidebar {
-  .field {
-    background-color: inherit;
-
-    .label {
-      background-color: inherit;
-    }
 
     select {
-      background-color: inherit;
+      inline-size: 100%;
+      padding-block: var(--size-2);
+      padding-inline: var(--size-3);
+      border-radius: var(--radius-round);
+      border: var(--border-size-1) solid var(--surface-3);
+      background-color: var(--surface-1);
+      color: inherit;
     }
   }
 }
