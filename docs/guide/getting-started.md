@@ -141,13 +141,27 @@ Then check your `node_modules` folder for the `opui-css` package and pick and ch
 
 #### Bundled files
 
-The `dist` folder includes bundled files with:
+<div class="not-rich-text">
 
-- `dist/op.css` all the needed `Open Props` imports
-- `dist/theme-one.css` all `OPUI` components
-- `dist/theme-one+op.css` all `OPUI` components + all needed `Open Props` imports
-- `dist/theme-two.css` all `OPUI` components
-- `dist/theme-two+op.css` all `OPUI` components + all needed `Open Props` imports
+<ul class="definition-list dotted">
+  <li>
+    <span class="term"><code>dist/theme-one.css</code></span>
+    <hr>
+    <span class="description">OP, imports, theme, components</span>
+  </li>
+  <li>
+   <span class="term"><code>dist/theme-two.css</code></span>
+   <hr>
+   <span class="description">OP, imports, theme, components</span>
+  </li>
+  <li>
+    <span class="term"><code>dist/op.css</code></span>
+    <hr>
+    <span class="description">all the needed Open Props imports</span>
+  </li>
+</ul>
+
+</div>
 
 ## CDN
 
