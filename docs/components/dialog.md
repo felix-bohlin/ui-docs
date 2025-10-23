@@ -20,6 +20,8 @@ import Alert from "../.vitepress/theme/app/components/Alert.vue";
 	}
 </script>
 
+<span></span>
+
 <div class="not-rich-text">
 <Alert title="Modal vs Dialog">
 <div class="rich-text">
