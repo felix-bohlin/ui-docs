@@ -50,7 +50,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 <template #example>
 <button @click="openModal" class="button">Open dialog</button>
 
-<dialog ref="dialog" role="alertdialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
+<dialog ref="dialog" role="alertdialog" closedby="closerequest" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
 		<hgroup>
 			<h2 id="dialog-heading" class="h4">Are you sure?</h2>
 		</hgroup>
@@ -59,8 +59,8 @@ In order to toggle a `<dialog>` you will need to use Javascript.
       nulla sit amet porttitor rhoncus.
 		</div>
 		<div class="actions">
-			<button class="button" @click="closeModal">Cancel</button>
-			<button class="button" @click="closeModal">Save</button>
+			<button class="button" @click="">Cancel</button>
+			<button class="button" @click="">Save</button>
 		</div>
 </dialog>
 </template>
@@ -105,6 +105,18 @@ closeButton.addEventListener("click", () => {
 
 </template>
 </Example>
+
+## How to close a dialog
+
+Use the `closedby` attribute!
+
+You can use it like this: `<dialog closedby="">` and give it the following values:
+
+| Attr value                | Description                                                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `closedby="any"`          | Click anywhere outside of the dialog to close it.                                                                                    |
+| `closedby="closerequest"` | Device-specific way to close, ex: <kbd>Esc</kbd> on desktop, back button on mobile, and whatever dismiss action assistive tools use. |
+| `closedby="none"`         | You have to handroll a closing solution yourself.                                                                                    |
 
 ## Accessibility
 

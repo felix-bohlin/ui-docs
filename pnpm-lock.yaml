@@ -54,8 +54,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       opui-css:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.1.1
+        version: 3.1.1
       shiki:
         specifier: ^3.10.0
         version: 3.10.0
@@ -1209,8 +1209,8 @@ packages:
   opui-css@2.4.0:
     resolution: {integrity: sha512-3ZwGfqRzcpUoYx2qgE+t2owjDbcU0m3evpu3wnDr4/F857ZrXUq3wfOhe7kVRVkBkCmx/WzucP031BKS7VVgDg==, tarball: https://registry.npmjs.org/opui-css/-/opui-css-2.4.0.tgz}
 
-  opui-css@3.0.0:
-    resolution: {integrity: sha512-dEXp8SJmxk2MIKkcpXEh2SN3CiOJRMuIELW+C6MENmxiBfBcDaKO0Wy0eNvrFw9+X68e8weX3YFunpQqk6ZTGQ==, tarball: https://registry.npmjs.org/opui-css/-/opui-css-3.0.0.tgz}
+  opui-css@3.1.1:
+    resolution: {integrity: sha512-7ozouoEmSFUbtpdwayA1DxPAiVSOQwwI+SECbLKqmJmlpDG1dNRK4jMXxApHVzDxgtzZSxtSiyGPIAtijmNNFg==, tarball: https://registry.npmjs.org/opui-css/-/opui-css-3.1.1.tgz}
 
   path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
@@ -2459,7 +2459,7 @@ snapshots:
 
   opui-css@2.4.0: {}
 
-  opui-css@3.0.0: {}
+  opui-css@3.1.1: {}
 
   path-browserify@1.0.1: {}
 
