@@ -52,7 +52,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 <template #example>
 <button @click="openModal" class="button">Open dialog</button>
 
-<dialog ref="dialog" role="alertdialog" closedby="closerequest" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
+<dialog ref="dialog" role="alertdialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
 		<hgroup>
 			<h2 id="dialog-heading" class="h4">Are you sure?</h2>
 		</hgroup>
@@ -61,8 +61,8 @@ In order to toggle a `<dialog>` you will need to use Javascript.
       nulla sit amet porttitor rhoncus.
 		</div>
 		<div class="actions">
-			<button class="button" @click="">Cancel</button>
-			<button class="button" @click="">Save</button>
+			<button class="button" @click="closeModal">Cancel</button>
+			<button class="button" @click="closeModal">Save</button>
 		</div>
 </dialog>
 </template>
